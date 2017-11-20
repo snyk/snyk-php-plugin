@@ -1,0 +1,25 @@
+{
+  "plugin": {
+    "name": "snyk-php-plugin",
+    "targetFile": "composer.lock"
+  },
+  "package": {
+    "name": "adodb/adodb-php",
+    "packageFormatVersion": "php:0.0.1",
+    "version": "0.0.0",
+    "dependencies": {
+      "php": {
+        "name": "php",
+        "version": ">=5.3.2",
+        "from": [
+          "adodb/adodb-php@0.0.0",
+          "php@>=5.3.2"
+        ],
+        "dependencies": {}
+      }
+    },
+    "from": [
+      "adodb/adodb-php@0.0.0"
+    ]
+  }
+}
