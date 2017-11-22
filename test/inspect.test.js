@@ -34,10 +34,11 @@ var deepTestFolders = [
   'vulnerable_project',
   'circular_deps_php_project',
   'many_deps_php_project',
+  'circular_deps_special_test',
 ];
 
 deepTestFolders.forEach( function(folder) {
-  tap.test('php plugin for project with no deps', function (t) {
+  tap.test('php plugin for ' + folder, function (t) {
     var projFolder = './test/stubs/' + folder;
     return plugin.inspect(projFolder, 'composer.lock')
       .then(function (result) {
