@@ -1,6 +1,7 @@
 var tap = require('tap');
 var path = require('path');
 var fs = require('fs');
+var _ = require('../dist/lodash-min');
 
 var plugin = require('../lib');
 
@@ -52,4 +53,28 @@ deepTestFolders.forEach( function(folder) {
         });
       }).catch(tap.threw);
   });
+});
+
+tap.test('with alias, uses correct version', function (t) {
+  var projFolder = './test/stubs/proj_with_aliases';
+  return plugin.inspect(projFolder, 'composer.lock')
+    .then(function (result) {
+      var composerJson = JSON.parse(fs.readFileSync(
+        path.resolve(projFolder, 'composer.json')));
+      var deps = result.package.dependencies;
+      var monologBridgeObj = _.find(deps, {name: 'symfony/monolog-bridge'});
+      // remove v from 'v2.6.0' and the trailing .0
+      var actualVersionInstalled =
+        monologBridgeObj.version.substr(1).slice(0, -2);
+      var expectedVersionString = _.get(composerJson,
+        'require[\'symfony/monolog-bridge\']'); // '2.6 as 2.7'
+      var expectedVersion = expectedVersionString.split(' as ');
+      var realVersion = expectedVersion[0]; // 2.6
+      var aliasVersion = expectedVersion[1]; // 2.7
+      t.test('so versions to real version and not alias', function (t) {
+        t.equal(actualVersionInstalled, realVersion, 'version mismatch');
+        t.notEqual(actualVersionInstalled, aliasVersion, 'matches alias!');
+        t.end();
+      });
+    }).catch(tap.threw);
 });
