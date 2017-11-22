@@ -67,3 +67,18 @@ tap.test('vulnerable project test', function (t) {
       });
     }).catch(tap.threw);
 });
+
+tap.test('circular deps project test', function (t) {
+  var projFolder = './test/stubs/circular_deps_php_project';
+  return plugin.inspect(projFolder, 'composer.lock')
+    .then(function (result) {
+      t.test('match packages with expected', function (t) {
+        var expectedTree = JSON.parse(fs.readFileSync(
+          path.resolve(projFolder, 'composer_deps.json')));
+        t.deepEqual(
+          result,
+          expectedTree);
+        t.end();
+      });
+    }).catch(tap.threw);
+});
