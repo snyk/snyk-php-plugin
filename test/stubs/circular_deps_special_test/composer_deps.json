@@ -6,7 +6,7 @@
   "package": {
     "name": "symfony/console",
     "version": "4.0-dev",
-    "packageFormatVersion": "php:0.0.1",
+    "packageFormatVersion": "composer:0.0.1",
     "dependencies": {
       "php": {
         "name": "php",
