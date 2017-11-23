@@ -26,44 +26,30 @@ tap.test('php plugin for project with many deps', function (t) {
         }, 'root pkg');
         t.end();
       });
-
-      t.test('match remaining subpackages', function (t) {
-        var expectedTree = JSON.parse(fs.readFileSync(
-          path.resolve(projFolder, 'composer_deps.json')));
-        t.deepEqual(
-          result.package.dependencies,
-          expectedTree.package.dependencies);
-        t.end();
-      });
-    }).catch(tap.threw);
+    });
 });
 
-tap.test('php plugin for project with no deps', function (t) {
-  var projFolder = './test/stubs/proj_with_no_deps';
-  return plugin.inspect(projFolder, 'composer.lock')
-    .then(function (result) {
-      t.test('match packages with expected', function (t) {
-        var expectedTree = JSON.parse(fs.readFileSync(
-          path.resolve(projFolder, 'composer_deps.json')));
-        t.deepEqual(
-          result,
-          expectedTree);
-        t.end();
-      });
-    }).catch(tap.threw);
-});
+var deepTestFolders = [
+  'proj_with_no_deps',
+  'vulnerable_project',
+  'circular_deps_php_project',
+  'many_deps_php_project',
+  'circular_deps_special_test',
+];
 
-tap.test('vulnerable project test', function (t) {
-  var projFolder = './test/stubs/vulnerable_project';
-  return plugin.inspect(projFolder, 'composer.lock')
-    .then(function (result) {
-      t.test('match packages with expected', function (t) {
-        var expectedTree = JSON.parse(fs.readFileSync(
-          path.resolve(projFolder, 'composer_deps.json')));
-        t.deepEqual(
-          result,
-          expectedTree);
-        t.end();
-      });
-    }).catch(tap.threw);
+deepTestFolders.forEach( function(folder) {
+  tap.test('php plugin for ' + folder, function (t) {
+    var projFolder = './test/stubs/' + folder;
+    return plugin.inspect(projFolder, 'composer.lock')
+      .then(function (result) {
+        t.test('match packages with expected', function (t) {
+          var expectedTree = JSON.parse(fs.readFileSync(
+            path.resolve(projFolder, 'composer_deps.json')));
+          t.deepEqual(
+            result,
+            expectedTree);
+          t.end();
+        });
+      }).catch(tap.threw);
+  });
 });
