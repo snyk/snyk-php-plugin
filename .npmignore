@@ -1,4 +1,4 @@
 .github
-.jscsrc
+.eslintrc
 .travis.yml
 /test
