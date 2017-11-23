@@ -5,7 +5,7 @@
   },
   "package": {
     "name": "adodb/adodb-php",
-    "packageFormatVersion": "php:0.0.1",
+    "packageFormatVersion": "composer:0.0.1",
     "version": "0.0.0",
     "dependencies": {
       "php": {
