@@ -6,7 +6,7 @@
   "package": {
     "name": "alises/project",
     "version": "0.0.0",
-    "packageFormatVersion": "php:0.0.1",
+    "packageFormatVersion": "composer:0.0.1",
     "dependencies": {
       "php": {
         "name": "php",

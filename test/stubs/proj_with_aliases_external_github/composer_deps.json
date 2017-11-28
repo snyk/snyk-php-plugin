@@ -6,7 +6,7 @@
   "package": {
     "name": "alises/project",
     "version": "0.0.0",
-    "packageFormatVersion": "php:0.0.1",
+    "packageFormatVersion": "composer:0.0.1",
     "dependencies": {
       "php": {
         "name": "php",
@@ -345,11 +345,11 @@
           },
           "symfony/monolog-bridge": {
             "name": "symfony/monolog-bridge",
-            "version": "my-bugfix",
+            "version": "dev-my-bugfix",
             "from": [
               "alises/project@0.0.0",
               "symfony/monolog-bundle@v3.1.2",
-              "symfony/monolog-bridge@my-bugfix"
+              "symfony/monolog-bridge@dev-my-bugfix"
             ],
             "dependencies": {
               "monolog/monolog": {
@@ -358,7 +358,7 @@
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
-                  "symfony/monolog-bridge@my-bugfix",
+                  "symfony/monolog-bridge@dev-my-bugfix",
                   "monolog/monolog@1.23.0"
                 ],
                 "dependencies": {
@@ -368,7 +368,7 @@
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
-                      "symfony/monolog-bridge@my-bugfix",
+                      "symfony/monolog-bridge@dev-my-bugfix",
                       "monolog/monolog@1.23.0",
                       "php@>=5.3.2"
                     ],
@@ -380,7 +380,7 @@
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
-                      "symfony/monolog-bridge@my-bugfix",
+                      "symfony/monolog-bridge@dev-my-bugfix",
                       "monolog/monolog@1.23.0",
                       "psr/log@1.0.2"
                     ],
@@ -391,7 +391,7 @@
                         "from": [
                           "alises/project@0.0.0",
                           "symfony/monolog-bundle@v3.1.2",
-                          "symfony/monolog-bridge@my-bugfix",
+                          "symfony/monolog-bridge@dev-my-bugfix",
                           "monolog/monolog@1.23.0",
                           "psr/log@1.0.2",
                           "php@>=5.3.2"
@@ -408,7 +408,7 @@
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
-                  "symfony/monolog-bridge@my-bugfix",
+                  "symfony/monolog-bridge@dev-my-bugfix",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -419,10 +419,10 @@
       },
       "symfony/monolog-bridge": {
         "name": "symfony/monolog-bridge",
-        "version": "my-bugfix",
+        "version": "dev-my-bugfix",
         "from": [
           "alises/project@0.0.0",
-          "symfony/monolog-bridge@my-bugfix"
+          "symfony/monolog-bridge@dev-my-bugfix"
         ],
         "dependencies": {
           "monolog/monolog": {
@@ -430,7 +430,7 @@
             "version": "1.23.0",
             "from": [
               "alises/project@0.0.0",
-              "symfony/monolog-bridge@my-bugfix",
+              "symfony/monolog-bridge@dev-my-bugfix",
               "monolog/monolog@1.23.0"
             ],
             "dependencies": {
@@ -439,7 +439,7 @@
                 "version": ">=5.3.2",
                 "from": [
                   "alises/project@0.0.0",
-                  "symfony/monolog-bridge@my-bugfix",
+                  "symfony/monolog-bridge@dev-my-bugfix",
                   "monolog/monolog@1.23.0",
                   "php@>=5.3.2"
                 ],
@@ -450,7 +450,7 @@
                 "version": "1.0.2",
                 "from": [
                   "alises/project@0.0.0",
-                  "symfony/monolog-bridge@my-bugfix",
+                  "symfony/monolog-bridge@dev-my-bugfix",
                   "monolog/monolog@1.23.0",
                   "psr/log@1.0.2"
                 ],
@@ -460,7 +460,7 @@
                     "version": ">=5.3.2",
                     "from": [
                       "alises/project@0.0.0",
-                      "symfony/monolog-bridge@my-bugfix",
+                      "symfony/monolog-bridge@dev-my-bugfix",
                       "monolog/monolog@1.23.0",
                       "psr/log@1.0.2",
                       "php@>=5.3.2"
@@ -476,7 +476,7 @@
             "version": ">=5.3.2",
             "from": [
               "alises/project@0.0.0",
-              "symfony/monolog-bridge@my-bugfix",
+              "symfony/monolog-bridge@dev-my-bugfix",
               "php@>=5.3.2"
             ],
             "dependencies": {}

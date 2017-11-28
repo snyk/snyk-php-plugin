@@ -24,7 +24,8 @@
   "devDependencies": {
     "lodash-cli": "^4.17.4",
     "eslint": "^4.11.0",
-    "tap": "^10.7.3",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^8.2.0",
+    "sync-request": "^4.1.0",
+    "tap": "^10.7.3"
   }
 }
