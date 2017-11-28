@@ -10,7 +10,10 @@
     "test": "npm run test-functional",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "files": ["lib", "dist"],
+  "files": [
+    "lib",
+    "dist"
+  ],
   "homepage": "https://github.com/snyk/snyk-php-plugin",
   "repository": {
     "type": "git",
@@ -25,7 +28,7 @@
     "lodash-cli": "^4.17.4",
     "eslint": "^4.11.0",
     "semantic-release": "^8.2.0",
-    "sync-request": "^4.1.0",
+    "sync-request": "^3",
     "tap": "^10.7.3"
   }
 }
