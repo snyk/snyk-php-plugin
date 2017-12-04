@@ -3,13 +3,15 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('../dist/lodash-min');
 var request = require('sync-request');
-var exec = require('sync-exec');
 
 var plugin = require('../lib');
+var options = {
+  debug: true,
+};
 
 tap.test('php plugin for project with many deps', function (t) {
   var projFolder = './test/stubs/many_deps_php_project';
-  return plugin.inspect(projFolder, 'composer.lock', {debug:true})
+  return plugin.inspect(projFolder, 'composer.lock', options)
     .then(function (result) {
       var plugin = result.plugin;
       var pkg = result.package;
@@ -45,7 +47,7 @@ var deepTestFolders = [
 deepTestFolders.forEach( function(folder) {
   tap.test('php plugin for ' + folder, function (t) {
     var projFolder = './test/stubs/' + folder;
-    return plugin.inspect(projFolder, 'composer.lock', {debug:true})
+    return plugin.inspect(projFolder, 'composer.lock', options)
       .then(function (result) {
         t.test('match packages with expected', function (t) {
           var expectedTree = JSON.parse(fs.readFileSync(
@@ -61,7 +63,7 @@ deepTestFolders.forEach( function(folder) {
 
 tap.test('with alias, uses correct version', function (t) {
   var projFolder = './test/stubs/proj_with_aliases';
-  return plugin.inspect(projFolder, 'composer.lock', {debug:true})
+  return plugin.inspect(projFolder, 'composer.lock', options)
     .then(function (result) {
       var composerJson = JSON.parse(fs.readFileSync(
         path.resolve(projFolder, 'composer.json')));
@@ -85,7 +87,7 @@ tap.test('with alias, uses correct version', function (t) {
 
 tap.test('with alias in external repo', function (t) {
   var projFolder = './test/stubs/proj_with_aliases_external_github';
-  return plugin.inspect(projFolder, 'composer.lock', {debug:true})
+  return plugin.inspect(projFolder, 'composer.lock', options)
     .then(function (result) {
       var composerJson = JSON.parse(fs.readFileSync(
         path.resolve(projFolder, 'composer.json')));
