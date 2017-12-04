@@ -10,10 +10,10 @@
     "dependencies": {
       "php": {
         "name": "php",
-        "version": ">=5.3.2",
+        "version": "7.1.12",
         "from": [
           "alises/project@0.0.0",
-          "php@>=5.3.2"
+          "php@7.1.12"
         ],
         "dependencies": {}
       },
@@ -36,12 +36,12 @@
             "dependencies": {
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
                   "monolog/monolog@1.23.0",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -57,13 +57,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "monolog/monolog@1.23.0",
                       "psr/log@1.0.2",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -73,11 +73,11 @@
           },
           "php": {
             "name": "php",
-            "version": ">=5.3.2",
+            "version": "7.1.12",
             "from": [
               "alises/project@0.0.0",
               "symfony/monolog-bundle@v3.1.2",
-              "php@>=5.3.2"
+              "php@7.1.12"
             ],
             "dependencies": {}
           },
@@ -92,12 +92,12 @@
             "dependencies": {
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
                   "symfony/config@v3.3.13",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -113,13 +113,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/config@v3.3.13",
                       "symfony/filesystem@v3.3.13",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -138,12 +138,12 @@
             "dependencies": {
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
                   "symfony/dependency-injection@v3.3.13",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -159,13 +159,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/dependency-injection@v3.3.13",
                       "psr/container@1.0.0",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -184,12 +184,12 @@
             "dependencies": {
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
                   "symfony/http-kernel@v3.3.13",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -205,13 +205,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/http-kernel@v3.3.13",
                       "psr/log@1.0.2",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -229,13 +229,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/http-kernel@v3.3.13",
                       "symfony/debug@v3.3.13",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   },
@@ -252,14 +252,14 @@
                     "dependencies": {
                       "php": {
                         "name": "php",
-                        "version": ">=5.3.2",
+                        "version": "7.1.12",
                         "from": [
                           "alises/project@0.0.0",
                           "symfony/monolog-bundle@v3.1.2",
                           "symfony/http-kernel@v3.3.13",
                           "symfony/debug@v3.3.13",
                           "psr/log@1.0.2",
-                          "php@>=5.3.2"
+                          "php@7.1.12"
                         ],
                         "dependencies": {}
                       }
@@ -279,13 +279,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/http-kernel@v3.3.13",
                       "symfony/event-dispatcher@v3.3.13",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -303,13 +303,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/http-kernel@v3.3.13",
                       "symfony/http-foundation@v3.3.13",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   },
@@ -326,14 +326,14 @@
                     "dependencies": {
                       "php": {
                         "name": "php",
-                        "version": ">=5.3.2",
+                        "version": "7.1.12",
                         "from": [
                           "alises/project@0.0.0",
                           "symfony/monolog-bundle@v3.1.2",
                           "symfony/http-kernel@v3.3.13",
                           "symfony/http-foundation@v3.3.13",
                           "symfony/polyfill-mbstring@v1.6.0",
-                          "php@>=5.3.2"
+                          "php@7.1.12"
                         ],
                         "dependencies": {}
                       }
@@ -364,13 +364,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bundle@v3.1.2",
                       "symfony/monolog-bridge@my-bugfix",
                       "monolog/monolog@1.23.0",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   },
@@ -387,14 +387,14 @@
                     "dependencies": {
                       "php": {
                         "name": "php",
-                        "version": ">=5.3.2",
+                        "version": "7.1.12",
                         "from": [
                           "alises/project@0.0.0",
                           "symfony/monolog-bundle@v3.1.2",
                           "symfony/monolog-bridge@my-bugfix",
                           "monolog/monolog@1.23.0",
                           "psr/log@1.0.2",
-                          "php@>=5.3.2"
+                          "php@7.1.12"
                         ],
                         "dependencies": {}
                       }
@@ -404,12 +404,12 @@
               },
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bundle@v3.1.2",
                   "symfony/monolog-bridge@my-bugfix",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               }
@@ -436,12 +436,12 @@
             "dependencies": {
               "php": {
                 "name": "php",
-                "version": ">=5.3.2",
+                "version": "7.1.12",
                 "from": [
                   "alises/project@0.0.0",
                   "symfony/monolog-bridge@my-bugfix",
                   "monolog/monolog@1.23.0",
-                  "php@>=5.3.2"
+                  "php@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -457,13 +457,13 @@
                 "dependencies": {
                   "php": {
                     "name": "php",
-                    "version": ">=5.3.2",
+                    "version": "7.1.12",
                     "from": [
                       "alises/project@0.0.0",
                       "symfony/monolog-bridge@my-bugfix",
                       "monolog/monolog@1.23.0",
                       "psr/log@1.0.2",
-                      "php@>=5.3.2"
+                      "php@7.1.12"
                     ],
                     "dependencies": {}
                   }
@@ -473,11 +473,11 @@
           },
           "php": {
             "name": "php",
-            "version": ">=5.3.2",
+            "version": "7.1.12",
             "from": [
               "alises/project@0.0.0",
               "symfony/monolog-bridge@my-bugfix",
-              "php@>=5.3.2"
+              "php@7.1.12"
             ],
             "dependencies": {}
           }

@@ -260,41 +260,41 @@
           },
           "ext-json": {
             "name": "ext-json",
-            "version": "*",
+            "version": "1.5.0",
             "from": [
               "circular/deps@4.0-dev",
               "phpunit/phpunit@6.5.x-dev",
-              "ext-json@*"
+              "ext-json@1.5.0"
             ],
             "dependencies": {}
           },
           "ext-libxml": {
             "name": "ext-libxml",
-            "version": "*",
+            "version": "7.1.12",
             "from": [
               "circular/deps@4.0-dev",
               "phpunit/phpunit@6.5.x-dev",
-              "ext-libxml@*"
+              "ext-libxml@7.1.12"
             ],
             "dependencies": {}
           },
           "ext-mbstring": {
             "name": "ext-mbstring",
-            "version": "*",
+            "version": "7.1.12",
             "from": [
               "circular/deps@4.0-dev",
               "phpunit/phpunit@6.5.x-dev",
-              "ext-mbstring@*"
+              "ext-mbstring@7.1.12"
             ],
             "dependencies": {}
           },
           "ext-xml": {
             "name": "ext-xml",
-            "version": "*",
+            "version": "7.1.12",
             "from": [
               "circular/deps@4.0-dev",
               "phpunit/phpunit@6.5.x-dev",
-              "ext-xml@*"
+              "ext-xml@7.1.12"
             ],
             "dependencies": {}
           },
@@ -1487,12 +1487,12 @@
               },
               "ext-xmlwriter": {
                 "name": "ext-xmlwriter",
-                "version": "*",
+                "version": "7.1.12",
                 "from": [
                   "circular/deps@4.0-dev",
                   "phpunit/phpunit@6.5.x-dev",
                   "phpunit/php-code-coverage@5.2.x-dev",
-                  "ext-xmlwriter@*"
+                  "ext-xmlwriter@7.1.12"
                 ],
                 "dependencies": {}
               },
@@ -1696,13 +1696,13 @@
                 "dependencies": {
                   "ext-tokenizer": {
                     "name": "ext-tokenizer",
-                    "version": "*",
+                    "version": "7.1.12",
                     "from": [
                       "circular/deps@4.0-dev",
                       "phpunit/phpunit@6.5.x-dev",
                       "phpunit/php-code-coverage@5.2.x-dev",
                       "phpunit/php-token-stream@2.0-dev",
-                      "ext-tokenizer@*"
+                      "ext-tokenizer@7.1.12"
                     ],
                     "dependencies": {}
                   },
@@ -1992,25 +1992,25 @@
                   },
                   "ext-tokenizer": {
                     "name": "ext-tokenizer",
-                    "version": "*",
+                    "version": "7.1.12",
                     "from": [
                       "circular/deps@4.0-dev",
                       "phpunit/phpunit@6.5.x-dev",
                       "phpunit/php-code-coverage@5.2.x-dev",
                       "theseer/tokenizer@1.1.0",
-                      "ext-tokenizer@*"
+                      "ext-tokenizer@7.1.12"
                     ],
                     "dependencies": {}
                   },
                   "ext-xmlwriter": {
                     "name": "ext-xmlwriter",
-                    "version": "*",
+                    "version": "7.1.12",
                     "from": [
                       "circular/deps@4.0-dev",
                       "phpunit/phpunit@6.5.x-dev",
                       "phpunit/php-code-coverage@5.2.x-dev",
                       "theseer/tokenizer@1.1.0",
-                      "ext-xmlwriter@*"
+                      "ext-xmlwriter@7.1.12"
                     ],
                     "dependencies": {}
                   },
@@ -3849,12 +3849,12 @@
               },
               "ext-mbstring": {
                 "name": "ext-mbstring",
-                "version": "*",
+                "version": "7.1.12",
                 "from": [
                   "circular/deps@4.0-dev",
                   "okaufmann/swiss-weather-api@0.0.6",
                   "illuminate/support@5.6-dev",
-                  "ext-mbstring@*"
+                  "ext-mbstring@7.1.12"
                 ],
                 "dependencies": {}
               },
