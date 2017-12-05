@@ -51,6 +51,11 @@ jobs:
         - npm test
     - stage: lint and npm release
       script:
+        - nvm install 8
+        - nvm use 8
+        - npm install
+        - npm run build
+        - npm test
         - npm run lint
       after_success:
         - TRAVIS_JOB_NUMBER=WORKAROUND.1 npm run semantic-release
