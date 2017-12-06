@@ -3,10 +3,12 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('../dist/lodash-min');
 var request = require('sync-request');
+var systemVersionsStub = require(
+  './stubs/system_deps_stub.js').systemDepsStub;
 
 var plugin = require('../lib');
 var options = {
-  debug: true,
+  systemVersions: systemVersionsStub,
 };
 
 tap.test('php plugin for project with many deps', function (t) {
