@@ -149,3 +149,24 @@ tap.test('with alias in external repo', function (t) {
       });
     }).catch(tap.threw);
 });
+
+tap.test('versions inacurracy when composer is not installed', function (t) {
+  var projFolder = './test/stubs/vulnerable_project';
+  // when we pass values, it takes them. if we don't pass them, it checks
+  options.composerIsFine = false;
+  options.composerPharIsFine = false;
+  options.systemVersions = [];
+
+  return plugin.inspect(projFolder, 'composer.lock', options)
+    .then(function (result) {
+      t.test('match packages with expected', function (t) {
+        var expectedTree = JSON.parse(fs.readFileSync(
+          path.resolve(projFolder, 'composer_deps_no_system_versions.json')));
+        t.deepEqual(
+          result,
+          expectedTree);
+        t.end();
+      });
+      t.end();
+    }).catch(tap.threw);
+});
