@@ -1,0 +1,491 @@
+{
+  "plugin": {
+    "name": "snyk-php-plugin",
+    "targetFile": "composer.lock"
+  },
+  "package": {
+    "name": "alises/project",
+    "version": "0.0.0",
+    "packageFormatVersion": "composer:0.0.1",
+    "dependencies": {
+      "php": {
+        "name": "php",
+        "version": "7.1.12",
+        "from": [
+          "alises/project@0.0.0",
+          "php@7.1.12"
+        ],
+        "dependencies": {}
+      },
+      "symfony/monolog-bundle": {
+        "name": "symfony/monolog-bundle",
+        "version": "v3.1.2",
+        "from": [
+          "alises/project@0.0.0",
+          "symfony/monolog-bundle@v3.1.2"
+        ],
+        "dependencies": {
+          "monolog/monolog": {
+            "name": "monolog/monolog",
+            "version": "1.23.0",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "monolog/monolog@1.23.0"
+            ],
+            "dependencies": {
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "monolog/monolog@1.23.0",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              },
+              "psr/log": {
+                "name": "psr/log",
+                "version": "1.0.2",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "monolog/monolog@1.23.0",
+                  "psr/log@1.0.2"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "monolog/monolog@1.23.0",
+                      "psr/log@1.0.2",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              }
+            }
+          },
+          "php": {
+            "name": "php",
+            "version": "7.1.12",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "php@7.1.12"
+            ],
+            "dependencies": {}
+          },
+          "symfony/config": {
+            "name": "symfony/config",
+            "version": "v3.3.13",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "symfony/config@v3.3.13"
+            ],
+            "dependencies": {
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/config@v3.3.13",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              },
+              "symfony/filesystem": {
+                "name": "symfony/filesystem",
+                "version": "v3.3.13",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/config@v3.3.13",
+                  "symfony/filesystem@v3.3.13"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/config@v3.3.13",
+                      "symfony/filesystem@v3.3.13",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              }
+            }
+          },
+          "symfony/dependency-injection": {
+            "name": "symfony/dependency-injection",
+            "version": "v3.3.13",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "symfony/dependency-injection@v3.3.13"
+            ],
+            "dependencies": {
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/dependency-injection@v3.3.13",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              },
+              "psr/container": {
+                "name": "psr/container",
+                "version": "1.0.0",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/dependency-injection@v3.3.13",
+                  "psr/container@1.0.0"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/dependency-injection@v3.3.13",
+                      "psr/container@1.0.0",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              }
+            }
+          },
+          "symfony/http-kernel": {
+            "name": "symfony/http-kernel",
+            "version": "v3.3.13",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "symfony/http-kernel@v3.3.13"
+            ],
+            "dependencies": {
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/http-kernel@v3.3.13",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              },
+              "psr/log": {
+                "name": "psr/log",
+                "version": "1.0.2",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/http-kernel@v3.3.13",
+                  "psr/log@1.0.2"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "psr/log@1.0.2",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              },
+              "symfony/debug": {
+                "name": "symfony/debug",
+                "version": "v3.3.13",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/http-kernel@v3.3.13",
+                  "symfony/debug@v3.3.13"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "symfony/debug@v3.3.13",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  },
+                  "psr/log": {
+                    "name": "psr/log",
+                    "version": "1.0.2",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "symfony/debug@v3.3.13",
+                      "psr/log@1.0.2"
+                    ],
+                    "dependencies": {
+                      "php": {
+                        "name": "php",
+                        "version": "7.1.12",
+                        "from": [
+                          "alises/project@0.0.0",
+                          "symfony/monolog-bundle@v3.1.2",
+                          "symfony/http-kernel@v3.3.13",
+                          "symfony/debug@v3.3.13",
+                          "psr/log@1.0.2",
+                          "php@7.1.12"
+                        ],
+                        "dependencies": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "symfony/event-dispatcher": {
+                "name": "symfony/event-dispatcher",
+                "version": "v3.3.13",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/http-kernel@v3.3.13",
+                  "symfony/event-dispatcher@v3.3.13"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "symfony/event-dispatcher@v3.3.13",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              },
+              "symfony/http-foundation": {
+                "name": "symfony/http-foundation",
+                "version": "v3.3.13",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/http-kernel@v3.3.13",
+                  "symfony/http-foundation@v3.3.13"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "symfony/http-foundation@v3.3.13",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  },
+                  "symfony/polyfill-mbstring": {
+                    "name": "symfony/polyfill-mbstring",
+                    "version": "v1.6.0",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/http-kernel@v3.3.13",
+                      "symfony/http-foundation@v3.3.13",
+                      "symfony/polyfill-mbstring@v1.6.0"
+                    ],
+                    "dependencies": {
+                      "php": {
+                        "name": "php",
+                        "version": "7.1.12",
+                        "from": [
+                          "alises/project@0.0.0",
+                          "symfony/monolog-bundle@v3.1.2",
+                          "symfony/http-kernel@v3.3.13",
+                          "symfony/http-foundation@v3.3.13",
+                          "symfony/polyfill-mbstring@v1.6.0",
+                          "php@7.1.12"
+                        ],
+                        "dependencies": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "symfony/monolog-bridge": {
+            "name": "symfony/monolog-bridge",
+            "version": "my-bugfix",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bundle@v3.1.2",
+              "symfony/monolog-bridge@my-bugfix"
+            ],
+            "dependencies": {
+              "monolog/monolog": {
+                "name": "monolog/monolog",
+                "version": "1.23.0",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/monolog-bridge@my-bugfix",
+                  "monolog/monolog@1.23.0"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/monolog-bridge@my-bugfix",
+                      "monolog/monolog@1.23.0",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  },
+                  "psr/log": {
+                    "name": "psr/log",
+                    "version": "1.0.2",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bundle@v3.1.2",
+                      "symfony/monolog-bridge@my-bugfix",
+                      "monolog/monolog@1.23.0",
+                      "psr/log@1.0.2"
+                    ],
+                    "dependencies": {
+                      "php": {
+                        "name": "php",
+                        "version": "7.1.12",
+                        "from": [
+                          "alises/project@0.0.0",
+                          "symfony/monolog-bundle@v3.1.2",
+                          "symfony/monolog-bridge@my-bugfix",
+                          "monolog/monolog@1.23.0",
+                          "psr/log@1.0.2",
+                          "php@7.1.12"
+                        ],
+                        "dependencies": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bundle@v3.1.2",
+                  "symfony/monolog-bridge@my-bugfix",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              }
+            }
+          }
+        }
+      },
+      "symfony/monolog-bridge": {
+        "name": "symfony/monolog-bridge",
+        "version": "my-bugfix",
+        "from": [
+          "alises/project@0.0.0",
+          "symfony/monolog-bridge@my-bugfix"
+        ],
+        "dependencies": {
+          "monolog/monolog": {
+            "name": "monolog/monolog",
+            "version": "1.23.0",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bridge@my-bugfix",
+              "monolog/monolog@1.23.0"
+            ],
+            "dependencies": {
+              "php": {
+                "name": "php",
+                "version": "7.1.12",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bridge@my-bugfix",
+                  "monolog/monolog@1.23.0",
+                  "php@7.1.12"
+                ],
+                "dependencies": {}
+              },
+              "psr/log": {
+                "name": "psr/log",
+                "version": "1.0.2",
+                "from": [
+                  "alises/project@0.0.0",
+                  "symfony/monolog-bridge@my-bugfix",
+                  "monolog/monolog@1.23.0",
+                  "psr/log@1.0.2"
+                ],
+                "dependencies": {
+                  "php": {
+                    "name": "php",
+                    "version": "7.1.12",
+                    "from": [
+                      "alises/project@0.0.0",
+                      "symfony/monolog-bridge@my-bugfix",
+                      "monolog/monolog@1.23.0",
+                      "psr/log@1.0.2",
+                      "php@7.1.12"
+                    ],
+                    "dependencies": {}
+                  }
+                }
+              }
+            }
+          },
+          "php": {
+            "name": "php",
+            "version": "7.1.12",
+            "from": [
+              "alises/project@0.0.0",
+              "symfony/monolog-bridge@my-bugfix",
+              "php@7.1.12"
+            ],
+            "dependencies": {}
+          }
+        }
+      }
+    },
+    "from": [
+      "alises/project@0.0.0"
+    ]
+  }
+}
