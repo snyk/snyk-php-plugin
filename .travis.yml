@@ -6,6 +6,9 @@ notifications:
 language: php
 php:
   - '7.1.12'
+cache:
+  directories:
+    - node_modules
 before_script:
   - sudo add-apt-repository -y ppa:ondrej/php
   - sudo apt-get update -y
@@ -16,7 +19,6 @@ jobs:
       script:
         - nvm install 0.12
         - nvm use 0.12
-        - rm -rf node_modules
         - npm install
         - npm run build
         - npm test
@@ -24,7 +26,6 @@ jobs:
       script:
         - nvm install 4
         - nvm use 4
-        - rm -rf node_modules
         - npm install
         - npm run build
         - npm test
@@ -32,7 +33,6 @@ jobs:
       script:
         - nvm install 6
         - nvm use 6
-        - rm -rf node_modules
         - npm install
         - npm run build
         - npm test
@@ -40,7 +40,6 @@ jobs:
       script:
         - nvm install 8
         - nvm use 8
-        - rm -rf node_modules
         - npm install
         - npm run build
         - npm test

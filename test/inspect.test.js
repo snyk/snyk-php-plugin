@@ -5,36 +5,12 @@ var _ = require('../dist/lodash-min');
 var request = require('sync-request');
 var systemVersionsStub = require(
   './stubs/system_deps_stub.js').systemDepsStub;
+var cmds = require('../lib/composer_cmds.js');
 
 var plugin = require('../lib');
 var options = {
   systemVersions: systemVersionsStub,
 };
-
-tap.test('php plugin for project with many deps', function (t) {
-  var projFolder = './test/stubs/many_deps_php_project';
-  return plugin.inspect(projFolder, 'composer.lock', options)
-    .then(function (result) {
-      var plugin = result.plugin;
-      var pkg = result.package;
-      t.test('match plugin object', function (t) {
-        t.ok(plugin, 'plugin');
-        t.equal(plugin.name, 'snyk-php-plugin', 'name');
-        t.equal(plugin.targetFile, 'composer.lock');
-        t.end();
-      });
-
-      t.test('match root pkg object', function (t) {
-        t.match(pkg, {
-          name: 'symfony/console',
-          version: '4.0-dev',
-          from: ['symfony/console@4.0-dev'],
-          packageFormatVersion: 'composer:0.0.1',
-        }, 'root pkg');
-        t.end();
-      });
-    });
-});
 
 var deepTestFolders = [
   'proj_with_no_deps',
@@ -61,6 +37,31 @@ deepTestFolders.forEach( function(folder) {
         });
       }).catch(tap.threw);
   });
+});
+
+tap.test('php plugin for project with many deps', function (t) {
+  var projFolder = './test/stubs/many_deps_php_project';
+  return plugin.inspect(projFolder, 'composer.lock', options)
+    .then(function (result) {
+      var plugin = result.plugin;
+      var pkg = result.package;
+      t.test('match plugin object', function (t) {
+        t.ok(plugin, 'plugin');
+        t.equal(plugin.name, 'snyk-php-plugin', 'name');
+        t.equal(plugin.targetFile, 'composer.lock');
+        t.end();
+      });
+
+      t.test('match root pkg object', function (t) {
+        t.match(pkg, {
+          name: 'symfony/console',
+          version: '4.0-dev',
+          from: ['symfony/console@4.0-dev'],
+          packageFormatVersion: 'composer:0.0.1',
+        }, 'root pkg');
+        t.end();
+      });
+    });
 });
 
 tap.test('with alias, uses correct version', function (t) {
@@ -169,4 +170,15 @@ tap.test('versions inacurracy when composer is not installed', function (t) {
       });
       t.end();
     }).catch(tap.threw);
+});
+
+tap.test('exec cmds correctly for folder', function (t) {
+  // ideally, we would like to run composer or php composer.phar show
+  // but we aren't at this stage, loading environments,
+  // so at the moment we're testing our function usage
+  var result = cmds.execWithResult('dir', './test');
+  t.contains(result, 'inspect.test.js', 'correctly list files in test');
+  var result = cmds.execWithResult('dir', './lib');
+  t.contains(result, 'system_deps.js', 'correctly list files in lib');
+  t.end();
 });
