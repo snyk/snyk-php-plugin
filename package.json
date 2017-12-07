@@ -3,10 +3,10 @@
   "description": "Snyk CLI PHP plugin",
   "main": "lib/index.js",
   "scripts": {
-    "build": "mkdir dist; lodash -p -o ./dist/lodash-min.js include=get,find,clone,invert,forEach",
+    "build": "./node_modules/.bin/lodash -p -o ./dist/lodash-min.js include=get,find,clone,invert,forEach",
     "lint": "npm run eslint",
     "eslint": "./node_modules/.bin/eslint -c .eslintrc lib test",
-    "test-functional": "tap `find ./test -name '*.test.js'` -R spec",
+    "test-functional": "tap test/**/*test.js -R spec",
     "test": "npm run test-functional",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
