@@ -8,7 +8,7 @@
     "eslint": "./node_modules/.bin/eslint -c .eslintrc lib test",
     "test-functional": "tap test/**/*test.js -R spec",
     "test": "npm run test-functional",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "lodash-cli": "^4.17.4",
     "eslint": "^4.11.0",
-    "semantic-release": "^8.2.0",
+    "semantic-release": "^11.0.1",
     "sync-request": "^3",
     "tap": "^10.7.3"
   }
