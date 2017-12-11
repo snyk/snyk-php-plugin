@@ -6,6 +6,8 @@ notifications:
 language: php
 php:
   - '7.1.12'
+env:
+  - BUILD_LEADER_ID=4
 cache:
   directories:
     - node_modules
@@ -44,8 +46,8 @@ jobs:
         - npm run build
         - npm test
         - npm run lint
-      after_success:
-        - TRAVIS_JOB_NUMBER=WORKAROUND.1 npm run semantic-release
+after_success:
+  - npm run semantic-release
 branches:
   only:
     - master
