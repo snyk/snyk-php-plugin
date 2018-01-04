@@ -1659,11 +1659,11 @@
           },
           "kevinrob/guzzle-cache-middleware": {
             "name": "kevinrob/guzzle-cache-middleware",
-            "version": "v3.1.0",
+            "version": "3.1.0",
             "from": [
               "symfony/console@4.0-dev",
               "okaufmann/swiss-weather-api@0.0.6",
-              "kevinrob/guzzle-cache-middleware@v3.1.0"
+              "kevinrob/guzzle-cache-middleware@3.1.0"
             ],
             "dependencies": {
               "php": {
@@ -1672,7 +1672,7 @@
                 "from": [
                   "symfony/console@4.0-dev",
                   "okaufmann/swiss-weather-api@0.0.6",
-                  "kevinrob/guzzle-cache-middleware@v3.1.0",
+                  "kevinrob/guzzle-cache-middleware@3.1.0",
                   "php@7.1.12"
                 ],
                 "dependencies": {}

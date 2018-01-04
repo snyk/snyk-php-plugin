@@ -442,13 +442,13 @@
                   },
                   "kevinrob/guzzle-cache-middleware": {
                     "name": "kevinrob/guzzle-cache-middleware",
-                    "version": "v3.1.0",
+                    "version": "3.1.0",
                     "from": [
                       "symfony/console@4.0-dev",
                       "symfony/polyfill-mbstring@1.6-dev",
                       "phar-io/manifest@1.0.x-dev",
                       "okaufmann/swiss-weather-api@0.0.6",
-                      "kevinrob/guzzle-cache-middleware@v3.1.0"
+                      "kevinrob/guzzle-cache-middleware@3.1.0"
                     ],
                     "dependencies": {
                       "php": {
@@ -459,7 +459,7 @@
                           "symfony/polyfill-mbstring@1.6-dev",
                           "phar-io/manifest@1.0.x-dev",
                           "okaufmann/swiss-weather-api@0.0.6",
-                          "kevinrob/guzzle-cache-middleware@v3.1.0",
+                          "kevinrob/guzzle-cache-middleware@3.1.0",
                           "php@7.1.12"
                         ],
                         "dependencies": {}
@@ -1148,7 +1148,7 @@
                           },
                           "kevinrob/guzzle-cache-middleware": {
                             "name": "kevinrob/guzzle-cache-middleware",
-                            "version": "v3.1.0",
+                            "version": "3.1.0",
                             "from": [
                               "symfony/console@4.0-dev",
                               "symfony/polyfill-mbstring@1.6-dev",
@@ -1156,7 +1156,7 @@
                               "doctrine/instantiator@1.2.x-dev",
                               "phar-io/manifest@1.0.x-dev",
                               "okaufmann/swiss-weather-api@0.0.6",
-                              "kevinrob/guzzle-cache-middleware@v3.1.0"
+                              "kevinrob/guzzle-cache-middleware@3.1.0"
                             ],
                             "dependencies": {
                               "php": {
@@ -1169,7 +1169,7 @@
                                   "doctrine/instantiator@1.2.x-dev",
                                   "phar-io/manifest@1.0.x-dev",
                                   "okaufmann/swiss-weather-api@0.0.6",
-                                  "kevinrob/guzzle-cache-middleware@v3.1.0",
+                                  "kevinrob/guzzle-cache-middleware@3.1.0",
                                   "php@7.1.12"
                                 ],
                                 "dependencies": {}
@@ -1785,14 +1785,14 @@
                       },
                       "kevinrob/guzzle-cache-middleware": {
                         "name": "kevinrob/guzzle-cache-middleware",
-                        "version": "v3.1.0",
+                        "version": "3.1.0",
                         "from": [
                           "symfony/console@4.0-dev",
                           "symfony/debug@4.0-dev",
                           "doctrine/instantiator@1.2.x-dev",
                           "phar-io/manifest@1.0.x-dev",
                           "okaufmann/swiss-weather-api@0.0.6",
-                          "kevinrob/guzzle-cache-middleware@v3.1.0"
+                          "kevinrob/guzzle-cache-middleware@3.1.0"
                         ],
                         "dependencies": {
                           "php": {
@@ -1804,7 +1804,7 @@
                               "doctrine/instantiator@1.2.x-dev",
                               "phar-io/manifest@1.0.x-dev",
                               "okaufmann/swiss-weather-api@0.0.6",
-                              "kevinrob/guzzle-cache-middleware@v3.1.0",
+                              "kevinrob/guzzle-cache-middleware@3.1.0",
                               "php@7.1.12"
                             ],
                             "dependencies": {}
@@ -2518,13 +2518,13 @@
                   },
                   "kevinrob/guzzle-cache-middleware": {
                     "name": "kevinrob/guzzle-cache-middleware",
-                    "version": "v3.1.0",
+                    "version": "3.1.0",
                     "from": [
                       "symfony/console@4.0-dev",
                       "phpunit/phpunit@6.5.x-dev",
                       "phar-io/manifest@1.0.x-dev",
                       "okaufmann/swiss-weather-api@0.0.6",
-                      "kevinrob/guzzle-cache-middleware@v3.1.0"
+                      "kevinrob/guzzle-cache-middleware@3.1.0"
                     ],
                     "dependencies": {
                       "php": {
@@ -2535,7 +2535,7 @@
                           "phpunit/phpunit@6.5.x-dev",
                           "phar-io/manifest@1.0.x-dev",
                           "okaufmann/swiss-weather-api@0.0.6",
-                          "kevinrob/guzzle-cache-middleware@v3.1.0",
+                          "kevinrob/guzzle-cache-middleware@3.1.0",
                           "php@7.1.12"
                         ],
                         "dependencies": {}
@@ -3336,7 +3336,7 @@
                           },
                           "kevinrob/guzzle-cache-middleware": {
                             "name": "kevinrob/guzzle-cache-middleware",
-                            "version": "v3.1.0",
+                            "version": "3.1.0",
                             "from": [
                               "symfony/console@4.0-dev",
                               "phpunit/phpunit@6.5.x-dev",
@@ -3344,7 +3344,7 @@
                               "doctrine/instantiator@1.2.x-dev",
                               "phar-io/manifest@1.0.x-dev",
                               "okaufmann/swiss-weather-api@0.0.6",
-                              "kevinrob/guzzle-cache-middleware@v3.1.0"
+                              "kevinrob/guzzle-cache-middleware@3.1.0"
                             ],
                             "dependencies": {
                               "php": {
@@ -3357,7 +3357,7 @@
                                   "doctrine/instantiator@1.2.x-dev",
                                   "phar-io/manifest@1.0.x-dev",
                                   "okaufmann/swiss-weather-api@0.0.6",
-                                  "kevinrob/guzzle-cache-middleware@v3.1.0",
+                                  "kevinrob/guzzle-cache-middleware@3.1.0",
                                   "php@7.1.12"
                                 ],
                                 "dependencies": {}
@@ -4712,7 +4712,7 @@
                           },
                           "kevinrob/guzzle-cache-middleware": {
                             "name": "kevinrob/guzzle-cache-middleware",
-                            "version": "v3.1.0",
+                            "version": "3.1.0",
                             "from": [
                               "symfony/console@4.0-dev",
                               "phpunit/phpunit@6.5.x-dev",
@@ -4720,7 +4720,7 @@
                               "doctrine/instantiator@1.2.x-dev",
                               "phar-io/manifest@1.0.x-dev",
                               "okaufmann/swiss-weather-api@0.0.6",
-                              "kevinrob/guzzle-cache-middleware@v3.1.0"
+                              "kevinrob/guzzle-cache-middleware@3.1.0"
                             ],
                             "dependencies": {
                               "php": {
@@ -4733,7 +4733,7 @@
                                   "doctrine/instantiator@1.2.x-dev",
                                   "phar-io/manifest@1.0.x-dev",
                                   "okaufmann/swiss-weather-api@0.0.6",
-                                  "kevinrob/guzzle-cache-middleware@v3.1.0",
+                                  "kevinrob/guzzle-cache-middleware@3.1.0",
                                   "php@7.1.12"
                                 ],
                                 "dependencies": {}
@@ -5900,11 +5900,11 @@
           },
           "kevinrob/guzzle-cache-middleware": {
             "name": "kevinrob/guzzle-cache-middleware",
-            "version": "v3.1.0",
+            "version": "3.1.0",
             "from": [
               "symfony/console@4.0-dev",
               "okaufmann/swiss-weather-api@0.0.6",
-              "kevinrob/guzzle-cache-middleware@v3.1.0"
+              "kevinrob/guzzle-cache-middleware@3.1.0"
             ],
             "dependencies": {
               "php": {
@@ -5913,7 +5913,7 @@
                 "from": [
                   "symfony/console@4.0-dev",
                   "okaufmann/swiss-weather-api@0.0.6",
-                  "kevinrob/guzzle-cache-middleware@v3.1.0",
+                  "kevinrob/guzzle-cache-middleware@3.1.0",
                   "php@7.1.12"
                 ],
                 "dependencies": {}

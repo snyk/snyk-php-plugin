@@ -72,9 +72,9 @@ tap.test('with alias, uses correct version', function (t) {
         path.resolve(projFolder, 'composer.json')));
       var deps = result.package.dependencies;
       var monologBridgeObj = _.find(deps, {name: 'symfony/monolog-bridge'});
-      // remove v from 'v2.6.0' and the trailing .0
+      // remove the trailing .0
       var actualVersionInstalled =
-        monologBridgeObj.version.substr(1).slice(0, -2);
+        monologBridgeObj.version.slice(0, -2);
       var expectedVersionString = _.get(composerJson,
         'require[\'symfony/monolog-bridge\']'); // '2.6 as 2.7'
       var expectedVersion = expectedVersionString.split(' as ');

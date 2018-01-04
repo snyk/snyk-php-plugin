@@ -19,40 +19,40 @@
       },
       "symfony/symfony": {
         "name": "symfony/symfony",
-        "version": "v2.3.1",
+        "version": "2.3.1",
         "from": [
           "vulnerable/project@0.0.0",
-          "symfony/symfony@v2.3.1"
+          "symfony/symfony@2.3.1"
         ],
         "dependencies": {
           "doctrine/common": {
             "name": "doctrine/common",
-            "version": "v2.5.0",
+            "version": "2.5.0",
             "from": [
               "vulnerable/project@0.0.0",
-              "symfony/symfony@v2.3.1",
-              "doctrine/common@v2.5.0"
+              "symfony/symfony@2.3.1",
+              "doctrine/common@2.5.0"
             ],
             "dependencies": {
               "doctrine/annotations": {
                 "name": "doctrine/annotations",
-                "version": "v1.5.0",
+                "version": "1.5.0",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/annotations@v1.5.0"
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/annotations@1.5.0"
                 ],
                 "dependencies": {
                   "doctrine/lexer": {
                     "name": "doctrine/lexer",
-                    "version": "v1.0.1",
+                    "version": "1.0.1",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/annotations@v1.5.0",
-                      "doctrine/lexer@v1.0.1"
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/annotations@1.5.0",
+                      "doctrine/lexer@1.0.1"
                     ],
                     "dependencies": {
                       "php": {
@@ -60,10 +60,10 @@
                         "version": ">=5.3.2",
                         "from": [
                           "vulnerable/project@0.0.0",
-                          "symfony/symfony@v2.3.1",
-                          "doctrine/common@v2.5.0",
-                          "doctrine/annotations@v1.5.0",
-                          "doctrine/lexer@v1.0.1",
+                          "symfony/symfony@2.3.1",
+                          "doctrine/common@2.5.0",
+                          "doctrine/annotations@1.5.0",
+                          "doctrine/lexer@1.0.1",
                           "php@>=5.3.2"
                         ],
                         "dependencies": {}
@@ -75,9 +75,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/annotations@v1.5.0",
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/annotations@1.5.0",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -86,12 +86,12 @@
               },
               "doctrine/cache": {
                 "name": "doctrine/cache",
-                "version": "v1.7.1",
+                "version": "1.7.1",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/cache@v1.7.1"
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/cache@1.7.1"
                 ],
                 "dependencies": {
                   "php": {
@@ -99,9 +99,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/cache@v1.7.1",
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/cache@1.7.1",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -110,12 +110,12 @@
               },
               "doctrine/collections": {
                 "name": "doctrine/collections",
-                "version": "v1.5.0",
+                "version": "1.5.0",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/collections@v1.5.0"
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/collections@1.5.0"
                 ],
                 "dependencies": {
                   "php": {
@@ -123,9 +123,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/collections@v1.5.0",
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/collections@1.5.0",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -134,12 +134,12 @@
               },
               "doctrine/inflector": {
                 "name": "doctrine/inflector",
-                "version": "v1.2.0",
+                "version": "1.2.0",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/inflector@v1.2.0"
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/inflector@1.2.0"
                 ],
                 "dependencies": {
                   "php": {
@@ -147,9 +147,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/inflector@v1.2.0",
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/inflector@1.2.0",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -158,12 +158,12 @@
               },
               "doctrine/lexer": {
                 "name": "doctrine/lexer",
-                "version": "v1.0.1",
+                "version": "1.0.1",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/lexer@v1.0.1"
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/lexer@1.0.1"
                 ],
                 "dependencies": {
                   "php": {
@@ -171,9 +171,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "symfony/symfony@v2.3.1",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/lexer@v1.0.1",
+                      "symfony/symfony@2.3.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/lexer@1.0.1",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -185,8 +185,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "doctrine/common@v2.5.0",
+                  "symfony/symfony@2.3.1",
+                  "doctrine/common@2.5.0",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -198,7 +198,7 @@
             "version": ">=5.3.2",
             "from": [
               "vulnerable/project@0.0.0",
-              "symfony/symfony@v2.3.1",
+              "symfony/symfony@2.3.1",
               "php@>=5.3.2"
             ],
             "dependencies": {}
@@ -208,7 +208,7 @@
             "version": "1.0.2",
             "from": [
               "vulnerable/project@0.0.0",
-              "symfony/symfony@v2.3.1",
+              "symfony/symfony@2.3.1",
               "psr/log@1.0.2"
             ],
             "dependencies": {
@@ -217,7 +217,7 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
+                  "symfony/symfony@2.3.1",
                   "psr/log@1.0.2",
                   "php@>=5.3.2"
                 ],
@@ -227,11 +227,11 @@
           },
           "symfony/icu": {
             "name": "symfony/icu",
-            "version": "v1.2.2",
+            "version": "1.2.2",
             "from": [
               "vulnerable/project@0.0.0",
-              "symfony/symfony@v2.3.1",
-              "symfony/icu@v1.2.2"
+              "symfony/symfony@2.3.1",
+              "symfony/icu@1.2.2"
             ],
             "dependencies": {
               "ext-intl": {
@@ -239,8 +239,8 @@
                 "version": "*",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "symfony/icu@v1.2.2",
+                  "symfony/symfony@2.3.1",
+                  "symfony/icu@1.2.2",
                   "ext-intl@*"
                 ],
                 "dependencies": {}
@@ -250,8 +250,8 @@
                 "version": ">=4.4",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "symfony/icu@v1.2.2",
+                  "symfony/symfony@2.3.1",
+                  "symfony/icu@1.2.2",
                   "lib-icu@>=4.4"
                 ],
                 "dependencies": {}
@@ -261,8 +261,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "symfony/icu@v1.2.2",
+                  "symfony/symfony@2.3.1",
+                  "symfony/icu@1.2.2",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -272,8 +272,8 @@
                 "version": "~2.3",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "symfony/icu@v1.2.2",
+                  "symfony/symfony@2.3.1",
+                  "symfony/icu@1.2.2",
                   "symfony/intl@~2.3"
                 ],
                 "dependencies": {}
@@ -282,11 +282,11 @@
           },
           "twig/twig": {
             "name": "twig/twig",
-            "version": "v1.35.0",
+            "version": "1.35.0",
             "from": [
               "vulnerable/project@0.0.0",
-              "symfony/symfony@v2.3.1",
-              "twig/twig@v1.35.0"
+              "symfony/symfony@2.3.1",
+              "twig/twig@1.35.0"
             ],
             "dependencies": {
               "php": {
@@ -294,8 +294,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "symfony/symfony@v2.3.1",
-                  "twig/twig@v1.35.0",
+                  "symfony/symfony@2.3.1",
+                  "twig/twig@1.35.0",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -363,12 +363,12 @@
             "dependencies": {
               "guzzlehttp/promises": {
                 "name": "guzzlehttp/promises",
-                "version": "v1.3.1",
+                "version": "1.3.1",
                 "from": [
                   "vulnerable/project@0.0.0",
                   "aws/aws-sdk-php@3.0.0",
                   "guzzlehttp/guzzle@6.3.0",
-                  "guzzlehttp/promises@v1.3.1"
+                  "guzzlehttp/promises@1.3.1"
                 ],
                 "dependencies": {
                   "php": {
@@ -378,7 +378,7 @@
                       "vulnerable/project@0.0.0",
                       "aws/aws-sdk-php@3.0.0",
                       "guzzlehttp/guzzle@6.3.0",
-                      "guzzlehttp/promises@v1.3.1",
+                      "guzzlehttp/promises@1.3.1",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -450,11 +450,11 @@
           },
           "guzzlehttp/promises": {
             "name": "guzzlehttp/promises",
-            "version": "v1.3.1",
+            "version": "1.3.1",
             "from": [
               "vulnerable/project@0.0.0",
               "aws/aws-sdk-php@3.0.0",
-              "guzzlehttp/promises@v1.3.1"
+              "guzzlehttp/promises@1.3.1"
             ],
             "dependencies": {
               "php": {
@@ -463,7 +463,7 @@
                 "from": [
                   "vulnerable/project@0.0.0",
                   "aws/aws-sdk-php@3.0.0",
-                  "guzzlehttp/promises@v1.3.1",
+                  "guzzlehttp/promises@1.3.1",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -552,29 +552,29 @@
       },
       "doctrine/common": {
         "name": "doctrine/common",
-        "version": "v2.5.0",
+        "version": "2.5.0",
         "from": [
           "vulnerable/project@0.0.0",
-          "doctrine/common@v2.5.0"
+          "doctrine/common@2.5.0"
         ],
         "dependencies": {
           "doctrine/annotations": {
             "name": "doctrine/annotations",
-            "version": "v1.5.0",
+            "version": "1.5.0",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
-              "doctrine/annotations@v1.5.0"
+              "doctrine/common@2.5.0",
+              "doctrine/annotations@1.5.0"
             ],
             "dependencies": {
               "doctrine/lexer": {
                 "name": "doctrine/lexer",
-                "version": "v1.0.1",
+                "version": "1.0.1",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/annotations@v1.5.0",
-                  "doctrine/lexer@v1.0.1"
+                  "doctrine/common@2.5.0",
+                  "doctrine/annotations@1.5.0",
+                  "doctrine/lexer@1.0.1"
                 ],
                 "dependencies": {
                   "php": {
@@ -582,9 +582,9 @@
                     "version": ">=5.3.2",
                     "from": [
                       "vulnerable/project@0.0.0",
-                      "doctrine/common@v2.5.0",
-                      "doctrine/annotations@v1.5.0",
-                      "doctrine/lexer@v1.0.1",
+                      "doctrine/common@2.5.0",
+                      "doctrine/annotations@1.5.0",
+                      "doctrine/lexer@1.0.1",
                       "php@>=5.3.2"
                     ],
                     "dependencies": {}
@@ -596,8 +596,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/annotations@v1.5.0",
+                  "doctrine/common@2.5.0",
+                  "doctrine/annotations@1.5.0",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -606,11 +606,11 @@
           },
           "doctrine/cache": {
             "name": "doctrine/cache",
-            "version": "v1.7.1",
+            "version": "1.7.1",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
-              "doctrine/cache@v1.7.1"
+              "doctrine/common@2.5.0",
+              "doctrine/cache@1.7.1"
             ],
             "dependencies": {
               "php": {
@@ -618,8 +618,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/cache@v1.7.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/cache@1.7.1",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -628,11 +628,11 @@
           },
           "doctrine/collections": {
             "name": "doctrine/collections",
-            "version": "v1.5.0",
+            "version": "1.5.0",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
-              "doctrine/collections@v1.5.0"
+              "doctrine/common@2.5.0",
+              "doctrine/collections@1.5.0"
             ],
             "dependencies": {
               "php": {
@@ -640,8 +640,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/collections@v1.5.0",
+                  "doctrine/common@2.5.0",
+                  "doctrine/collections@1.5.0",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -650,11 +650,11 @@
           },
           "doctrine/inflector": {
             "name": "doctrine/inflector",
-            "version": "v1.2.0",
+            "version": "1.2.0",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
-              "doctrine/inflector@v1.2.0"
+              "doctrine/common@2.5.0",
+              "doctrine/inflector@1.2.0"
             ],
             "dependencies": {
               "php": {
@@ -662,8 +662,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/inflector@v1.2.0",
+                  "doctrine/common@2.5.0",
+                  "doctrine/inflector@1.2.0",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -672,11 +672,11 @@
           },
           "doctrine/lexer": {
             "name": "doctrine/lexer",
-            "version": "v1.0.1",
+            "version": "1.0.1",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
-              "doctrine/lexer@v1.0.1"
+              "doctrine/common@2.5.0",
+              "doctrine/lexer@1.0.1"
             ],
             "dependencies": {
               "php": {
@@ -684,8 +684,8 @@
                 "version": ">=5.3.2",
                 "from": [
                   "vulnerable/project@0.0.0",
-                  "doctrine/common@v2.5.0",
-                  "doctrine/lexer@v1.0.1",
+                  "doctrine/common@2.5.0",
+                  "doctrine/lexer@1.0.1",
                   "php@>=5.3.2"
                 ],
                 "dependencies": {}
@@ -697,7 +697,7 @@
             "version": ">=5.3.2",
             "from": [
               "vulnerable/project@0.0.0",
-              "doctrine/common@v2.5.0",
+              "doctrine/common@2.5.0",
               "php@>=5.3.2"
             ],
             "dependencies": {}
