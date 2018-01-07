@@ -13,6 +13,6 @@ function main() {
     }).catch(function (error) {
       console.log('Error:', error.stack);
     });
-};
+}
 
 main();
