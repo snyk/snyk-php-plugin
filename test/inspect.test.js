@@ -20,6 +20,7 @@ var deepTestFolders = [
   'circular_deps_special_test',
   'proj_with_aliases',
   'proj_with_aliases_external_github',
+  'no_branch_alias',
 ];
 
 deepTestFolders.forEach( function(folder) {
