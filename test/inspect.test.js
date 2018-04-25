@@ -171,14 +171,3 @@ tap.test('versions inacurracy when composer is not installed', function (t) {
       t.end();
     }).catch(tap.threw);
 });
-
-tap.test('exec cmds correctly for folder', function (t) {
-  // ideally, we would like to run composer or php composer.phar show
-  // but we aren't at this stage, loading environments,
-  // so at the moment we're testing our function usage
-  var result = cmds.execWithResult('dir', './test');
-  t.contains(result, 'inspect.test.js', 'correctly list files in test');
-  var result = cmds.execWithResult('dir', './lib');
-  t.contains(result, 'system_deps.js', 'correctly list files in lib');
-  t.end();
-});
