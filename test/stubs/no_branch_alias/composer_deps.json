@@ -11,38 +11,19 @@
       "php": {
         "name": "php",
         "version": "7.1.12",
-        "from": [
-          "test_of/null_branch_alias@0.0.0",
-          "php@7.1.12"
-        ],
         "dependencies": {}
       },
       "josantonius/router": {
         "name": "josantonius/router",
         "version": "1.0.9",
-        "from": [
-          "test_of/null_branch_alias@0.0.0",
-          "josantonius/router@1.0.9"
-        ],
         "dependencies": {
           "josantonius/url": {
             "name": "josantonius/url",
             "version": "1.1.8",
-            "from": [
-              "test_of/null_branch_alias@0.0.0",
-              "josantonius/router@1.0.9",
-              "josantonius/url@1.1.8"
-            ],
             "dependencies": {
               "php": {
                 "name": "php",
                 "version": "7.1.12",
-                "from": [
-                  "test_of/null_branch_alias@0.0.0",
-                  "josantonius/router@1.0.9",
-                  "josantonius/url@1.1.8",
-                  "php@7.1.12"
-                ],
                 "dependencies": {}
               }
             }
@@ -50,18 +31,10 @@
           "php": {
             "name": "php",
             "version": "7.1.12",
-            "from": [
-              "test_of/null_branch_alias@0.0.0",
-              "josantonius/router@1.0.9",
-              "php@7.1.12"
-            ],
             "dependencies": {}
           }
         }
       }
-    },
-    "from": [
-      "test_of/null_branch_alias@0.0.0"
-    ]
+    }
   }
 }

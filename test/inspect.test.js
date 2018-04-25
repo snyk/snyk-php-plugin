@@ -57,7 +57,6 @@ tap.test('php plugin for project with many deps', function (t) {
         t.match(pkg, {
           name: 'symfony/console',
           version: '4.0-dev',
-          from: ['symfony/console@4.0-dev'],
           packageFormatVersion: 'composer:0.0.1',
         }, 'root pkg');
         t.end();
