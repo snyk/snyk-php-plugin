@@ -11,15 +11,8 @@
       "php": {
         "name": "php",
         "version": "7.1.12",
-        "from": [
-          "adodb/adodb-php@0.0.0",
-          "php@7.1.12"
-        ],
         "dependencies": {}
       }
-    },
-    "from": [
-      "adodb/adodb-php@0.0.0"
-    ]
+    }
   }
 }

@@ -57,7 +57,6 @@ tap.test('php plugin for project with many deps', function (t) {
         t.match(pkg, {
           name: 'symfony/console',
           version: '4.0-dev',
-          from: ['symfony/console@4.0-dev'],
           packageFormatVersion: 'composer:0.0.1',
         }, 'root pkg');
         t.end();
@@ -171,15 +170,4 @@ tap.test('versions inacurracy when composer is not installed', function (t) {
       });
       t.end();
     }).catch(tap.threw);
-});
-
-tap.test('exec cmds correctly for folder', function (t) {
-  // ideally, we would like to run composer or php composer.phar show
-  // but we aren't at this stage, loading environments,
-  // so at the moment we're testing our function usage
-  var result = cmds.execWithResult('dir', './test');
-  t.contains(result, 'inspect.test.js', 'correctly list files in test');
-  var result = cmds.execWithResult('dir', './lib');
-  t.contains(result, 'system_deps.js', 'correctly list files in lib');
-  t.end();
 });
