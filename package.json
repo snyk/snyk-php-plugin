@@ -3,7 +3,6 @@
   "description": "Snyk CLI PHP plugin",
   "main": "lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/lodash -p -o ./dist/lodash-min.js include=get,find,clone,invert,forEach,findKey",
     "lint": "npm run eslint",
     "eslint": "./node_modules/.bin/eslint -c .eslintrc lib test",
     "test-functional": "tap test/**/*test.js -R spec",
@@ -11,8 +10,7 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "files": [
-    "lib",
-    "dist"
+    "lib"
   ],
   "homepage": "https://github.com/snyk/snyk-php-plugin",
   "repository": {
@@ -22,10 +20,10 @@
   "author": "snyk.io",
   "license": "Apache-2.0",
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "^3.1.0",
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
-    "lodash-cli": "^4.17.4",
     "eslint": "^4.11.0",
     "semantic-release": "^8.2.0",
     "sync-request": "^3",
