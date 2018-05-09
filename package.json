@@ -21,7 +21,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "debug": "^3.1.0",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "path": "0.12.7"
   },
   "devDependencies": {
     "eslint": "^4.11.0",

@@ -171,3 +171,20 @@ tap.test('versions inacurracy when composer is not installed', function (t) {
       t.end();
     }).catch(tap.threw);
 });
+
+tap.test('project name is not empty', function (t) {
+  var projFolder = './test/stubs/no_project_name';
+
+  return plugin.inspect(projFolder, 'composer.lock', options)
+    .then(function (result) {
+      t.test('make sure project name is no-name', function (t) {
+        t.deepEqual(
+          result.package.name,
+          'no_project_name'
+        );
+
+        t.end();
+      });
+      t.end();
+    }).catch(tap.threw);
+});
