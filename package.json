@@ -3,10 +3,8 @@
   "description": "Snyk CLI PHP plugin",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "npm run eslint",
-    "eslint": "./node_modules/.bin/eslint -c .eslintrc lib test",
-    "test-functional": "tap test/**/*test.js -R spec",
-    "test": "npm run test-functional",
+    "lint": "eslint -c .eslintrc lib test",
+    "test": "tap test/*.test.js -R spec",
     "semantic-release": "semantic-release"
   },
   "files": [

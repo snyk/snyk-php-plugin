@@ -11,13 +11,12 @@ cache:
   directories:
     - node_modules
 script:
-  - "npm test"
+  - npm run lint
+  - npm test
 jobs:
   include:
-    - stage: lint and npm release
+    - stage: Release
       node_js: "8"
-      script:
-        - npm run lint
       after_success:
         - npm run semantic-release
 branches:

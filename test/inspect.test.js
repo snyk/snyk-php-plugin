@@ -5,7 +5,6 @@ var _ = require('lodash');
 var request = require('sync-request');
 var systemVersionsStub = require(
   './stubs/system_deps_stub.js').systemDepsStub;
-var cmds = require('../lib/composer_cmds.js');
 
 var plugin = require('../lib');
 var options = {
