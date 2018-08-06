@@ -3,11 +3,9 @@
   "description": "Snyk CLI PHP plugin",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "npm run eslint",
-    "eslint": "./node_modules/.bin/eslint -c .eslintrc lib test",
-    "test-functional": "tap test/**/*test.js -R spec",
-    "test": "npm run test-functional",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "lint": "eslint -c .eslintrc lib test",
+    "test": "tap test/*.test.js -R spec",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib"
@@ -21,12 +19,11 @@
   "license": "Apache-2.0",
   "dependencies": {
     "debug": "^3.1.0",
-    "lodash": "^4.17.5",
-    "path": "0.12.7"
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
     "eslint": "^4.11.0",
-    "semantic-release": "^8.2.0",
+    "semantic-release": "^15",
     "sync-request": "^3",
     "tap": "^10.7.3"
   }
