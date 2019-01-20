@@ -41,14 +41,14 @@ deepTestFolders.forEach( function(folder) {
 
 tap.test('php plugin for project with many deps', function (t) {
   var projFolder = './test/stubs/many_deps_php_project';
-  return plugin.inspect(projFolder, 'composer.lock', options)
+  return plugin.inspect(projFolder, './composer.lock', options)
     .then(function (result) {
       var plugin = result.plugin;
       var pkg = result.package;
       t.test('match plugin object', function (t) {
         t.ok(plugin, 'plugin');
         t.equal(plugin.name, 'snyk-php-plugin', 'name');
-        t.equal(plugin.targetFile, 'composer.lock');
+        t.equal(plugin.targetFile, './composer.lock');
         t.end();
       });
 
