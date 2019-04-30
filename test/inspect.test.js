@@ -63,6 +63,34 @@ tap.test('php plugin for project with many deps', function (t) {
     });
 });
 
+tap.test('php plugin for project with interconnected deps', function (t) {
+  var projFolder = './test/stubs/interdependent_modules';
+  return plugin.inspect(projFolder, './composer.lock', options)
+    .then(function (result) {
+      var plugin = result.plugin;
+      var pkg = result.package;
+      t.test('match plugin object', function (t) {
+        t.ok(plugin, 'plugin');
+        t.equal(plugin.name, 'snyk-php-plugin', 'name');
+        t.equal(plugin.targetFile, './composer.lock');
+        t.end();
+      });
+
+      t.test('match root pkg object', function (t) {
+        t.match(pkg, {
+          name: 'foo',
+          version: '1.1.1',
+          packageFormatVersion: 'composer:0.0.1',
+        }, 'root pkg');
+        t.end();
+      });
+      t.test('dep tree total size is as expected', function (t) {
+        t.ok(JSON.stringify(pkg).length < 200000, 'dep tree JSON < 200KB');
+        t.end();
+      });
+    });
+});
+
 tap.test('with alias, uses correct version', function (t) {
   var projFolder = './test/stubs/proj_with_aliases';
   return plugin.inspect(projFolder, 'composer.lock', options)
