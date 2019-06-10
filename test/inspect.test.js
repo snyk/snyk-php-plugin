@@ -3,13 +3,9 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var request = require('sync-request');
-var systemVersionsStub = require(
-  './stubs/system_deps_stub.js').systemDepsStub;
-
+var systemVersionsStub = require('./stubs/system_deps_stub.js').systemDepsStub;
 var plugin = require('../lib');
-var options = {
-  systemVersions: systemVersionsStub,
-};
+var options = {systemVersions: systemVersionsStub};
 
 var deepTestFolders = [
   'proj_with_no_deps',

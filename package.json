@@ -18,12 +18,14 @@
   "author": "snyk.io",
   "license": "Apache-2.0",
   "dependencies": {
+    "@snyk/composer-lockfile-parser": "1.0.1",
     "debug": "^3.1.0",
     "lodash": "^4.17.5"
   },
   "devDependencies": {
     "eslint": "^4.11.0",
     "sync-request": "^3",
-    "tap": "^10.7.3"
+    "tap": "^10.7.3",
+    "tslib": "1.9.3"
   }
 }
