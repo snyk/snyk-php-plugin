@@ -1,10 +1,14 @@
-import * as cmds from './composer_cmds';
+import * as os from 'os';
+import { SystemPackages } from '@snyk/composer-lockfile-parser';
 
-function isSet(variable) {
+import * as cmds from './composer-cmds';
+import { SystemPackagesOptions } from './types';
+
+function isSet(variable): boolean {
   return typeof variable !== 'undefined';
 }
 
-export function systemDeps(basePath, options) {
+export function systemDeps(basePath: string, options: SystemPackagesOptions): SystemPackages {
   const composerOk = isSet(options.composerIsFine) ? options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd);
   const composerPharOk = isSet(options.composerPharIsFine) ?
       options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharCmd);
@@ -15,18 +19,18 @@ export function systemDeps(basePath, options) {
     // give first preference to a stub
     finalVersionsObj = options.systemVersions;
   } else if (composerOk) {
-    const lines = cmds.execWithResult(cmds.composerShowCmd, basePath).split('\n');
+    const lines = cmds.execWithResult(cmds.composerShowCmd, basePath).split(os.EOL);
     lines.forEach((line) => {
-      const parts = line.split(/\s+/);
-      if (parts.length > 1) {
-        finalVersionsObj[parts[0]] = parts[1];
+      const [part1, part2] = line.split(/\s+/);
+      if (part2) {
+        finalVersionsObj[part1] = part2;
       }
     });
   } else if (composerPharOk) {
     const output = cmds.execWithResult(cmds.pharCmd, basePath);
     const versionsObj = JSON.parse(output).platform;
-    versionsObj.forEach((value) => {
-      finalVersionsObj[value.name] = value.version;
+    versionsObj.forEach(({name, version}) => {
+      finalVersionsObj[name] = version;
     });
   } else {
     // TODO: tell the user we are not reporting accurately system versions, so some version info may not be exact

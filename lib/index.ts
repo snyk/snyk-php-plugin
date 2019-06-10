@@ -1,16 +1,14 @@
 import * as composerLockFileParser from '@snyk/composer-lockfile-parser';
 
-import { systemDeps } from './system_deps';
+import { systemDeps } from './system-deps';
+import { PhpPluginResult, SystemPackagesOptions } from './types';
 
-export function inspect(basePath: string, fileName: string, options: object = {}) {
+export function inspect(basePath: string, fileName: string, options: SystemPackagesOptions): PhpPluginResult {
   const systemVersions = systemDeps(basePath, options);
-  const data = {
-    plugin: {
-      name: 'snyk-php-plugin',
-      targetFile: fileName,
-    },
-    package: composerLockFileParser.buildDepTreeFromFiles(basePath, fileName, systemVersions),
-  };
+  const depsTree = composerLockFileParser.buildDepTreeFromFiles(basePath, fileName, systemVersions);
 
-  return Promise.resolve(data);
+  return {
+    package: depsTree,
+    plugin: { name: 'snyk-php-plugin', targetFile: fileName },
+  };
 }
