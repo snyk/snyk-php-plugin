@@ -1,11 +1,15 @@
 {
   "name": "snyk-php-plugin",
   "description": "Snyk CLI PHP plugin",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint -c .eslintrc lib test",
-    "test": "tap test/*.test.js -R spec",
-    "semantic-release": "semantic-release"
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release",
+    "test": "npm run lint && npm run unit-test",
+    "unit-test": "tap -Rspec test/*.test.ts --timeout=300"
   },
   "files": [
     "lib"
@@ -17,15 +21,23 @@
   },
   "author": "snyk.io",
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">=6"
+  },
   "dependencies": {
     "@snyk/composer-lockfile-parser": "1.0.1",
     "debug": "^3.1.0",
     "lodash": "^4.17.5"
   },
   "devDependencies": {
+    "@types/debug": "4.1.4",
+    "@types/lodash": "4.14.133",
+    "@types/node": "6.14.6",
     "eslint": "^4.11.0",
-    "sync-request": "^3",
-    "tap": "^10.7.3",
-    "tslib": "1.9.3"
+    "sync-request": "3.0.1",
+    "tap": "14.2.2",
+    "tslib": "1.9.3",
+    "tslint": "5.17.0",
+    "typescript": "3.5.1"
   }
 }

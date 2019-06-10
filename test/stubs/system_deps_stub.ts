@@ -1,4 +1,4 @@
-var systemDepsStub = {
+export const systemVersionsStub = {
   'composer-plugin-api': '1.1.0',
   'ext-calendar': '7.1.12',
   'ext-ctype': '7.1.12',
@@ -51,8 +51,4 @@ var systemDepsStub = {
   'php': '7.1.12',
   'php-64bit': '7.1.12',
   'php-ipv6': '7.1.12',
-};
-
-module.exports = {
-  systemDepsStub: systemDepsStub,
 };

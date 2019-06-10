@@ -1,16 +1,15 @@
-var plugin = require('../lib');
+import * as plugin from '../lib';
 
 // Instructions:
 // Run the following from this test folder:
 //   node manual.js project_folder_path composer.lock
-
 function main() {
-  var targetPath = process.argv[2];
-  var targetFile = process.argv[3];
+  const targetPath = process.argv[2];
+  const targetFile = process.argv[3];
   plugin.inspect(targetPath, targetFile)
-    .then(function (result) {
+    .then((result) => {
       console.log(JSON.stringify(result, null, 2));
-    }).catch(function (error) {
+    }).catch((error) => {
       console.log('Error:', error.stack);
     });
 }
