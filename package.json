@@ -12,7 +12,7 @@
     "unit-test": "tap -Rspec test/*.test.ts --timeout=300"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "homepage": "https://github.com/snyk/snyk-php-plugin",
   "repository": {
