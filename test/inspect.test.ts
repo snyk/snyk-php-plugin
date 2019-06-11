@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as tap from 'tap';
-import * as _ from 'lodash';
 import * as path from 'path';
 import * as request from 'sync-request';
 
@@ -84,10 +83,10 @@ tap.test('with alias, uses correct version', async (t) => {
   const { package: pkg } = plugin.inspect(projFolder, './composer.lock', options);
   const deps = pkg.dependencies;
   const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf-8'));
-  const monologBridgeObj = _.find(deps, { name: 'symfony/monolog-bridge' });
+  const {version}  = deps['symfony/monolog-bridge'];
   // remove the trailing .0
-  const actualVersionInstalled = monologBridgeObj.version.slice(0, -2);
-  const expectedVersionString = _.get(composerJson, 'require[\'symfony/monolog-bridge\']'); // '2.6 as 2.7'
+  const actualVersionInstalled = version.slice(0, -2);
+  const expectedVersionString = composerJson.require && composerJson.require['symfony/monolog-bridge']; // '2.6 as 2.7'
   // real = 2.6, alias = 2.7
   const [realVersion, aliasVersion] = expectedVersionString.split(' as ');
 
@@ -122,7 +121,9 @@ tap.test('with alias in external repo', async (t) => {
   } catch (error) {
     branchesData = [{name: 'my-bugfix'}];
   }
-  const ourAliasBranchName = _.get(_.find(branchesData, { name: aliasBranch }), 'name');
+
+  const ourAliasBranchObj = branchesData.find(({name}) => name === aliasBranch);
+  const ourAliasBranchName = ourAliasBranchObj && ourAliasBranchObj.name;
 
   t.test('in composer.json', (test) => {
     // it's version looks like this: dev-my-bugfix as 2.7
@@ -147,10 +148,10 @@ tap.test('with alias in external repo', async (t) => {
   // now to make sure we got it right in the plugin parsing
   t.test('in plugin result', (test) => {
     const deps = pkg.dependencies;
-    const monologBridgeObj = _.find(deps, { name: 'symfony/monolog-bridge' });
+    const {version} = deps['symfony/monolog-bridge'];
     // do we want our found version to contain a dev- prefix or not?
     // guessing not, we should add functionality so this test passes
-    test.equal(monologBridgeObj.version, aliasBranch, 'alias branch must match result');
+    test.equal(version, aliasBranch, 'alias branch must match result');
     test.end();
   });
 });

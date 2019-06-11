@@ -11,7 +11,7 @@ export interface PhpPlugin {
 }
 
 export interface SystemPackagesOptions {
-    composerIsFine: boolean;
-    composerPharIsFine: boolean;
-    systemVersions: object;
+    composerIsFine?: boolean;
+    composerPharIsFine?: boolean;
+    systemVersions?: object;
 }

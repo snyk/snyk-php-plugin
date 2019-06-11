@@ -6,12 +6,15 @@ import * as plugin from '../lib';
 function main() {
   const targetPath = process.argv[2];
   const targetFile = process.argv[3];
-  plugin.inspect(targetPath, targetFile)
-    .then((result) => {
-      console.log(JSON.stringify(result, null, 2));
-    }).catch((error) => {
-      console.log('Error:', error.stack);
-    });
+
+  try {
+    const result = plugin.inspect(targetPath, targetFile, {});
+    // tslint:disable-next-line:no-console
+    console.log(JSON.stringify(result, null, 2));
+  } catch (e) {
+    // tslint:disable-next-line:no-console
+    console.log('Error:', error.stack);
+  }
 }
 
 main();
