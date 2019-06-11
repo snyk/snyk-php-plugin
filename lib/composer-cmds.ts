@@ -1,9 +1,9 @@
 import * as path from 'path';
 import * as childProcess from 'child_process';
 
-export const composerCmd: string = 'composer --version';
-export const composerShowCmd: string = 'composer show -p';
-export const pharCmd: string = `php ${path.resolve(path.resolve() + '/composer.phar')} show -p --format=json`;
+export const composerCmd = 'composer --version';
+export const composerShowCmd = 'composer show -p';
+export const pharCmd = `php ${path.resolve(path.resolve() + '/composer.phar')} show -p --format=json`;
 
 export function cmdReturnsOk(cmd): boolean {
   return cmd && childProcess.spawnSync(cmd, { shell: true }).status === 0;

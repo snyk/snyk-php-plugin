@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "build-watch": "tsc -w",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint {lib,test}/**/*.ts",
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "test": "npm run lint && npm run unit-test",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "https://github.com/snyk/snyk-php-plugin"
   },
-  "author": "snyk.io",
+  "author": "Snyk <https://snyk.io>",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=6"
@@ -29,10 +29,12 @@
   },
   "devDependencies": {
     "@types/node": "6.14.6",
+    "@typescript-eslint/eslint-plugin": "1.10.2",
+    "@typescript-eslint/parser": "1.10.2",
+    "eslint": "5.16.0",
     "sync-request": "3.0.1",
     "tap": "12.7.0",
     "tslib": "1.9.3",
-    "tslint": "5.17.0",
     "typescript": "3.5.1"
   }
 }
