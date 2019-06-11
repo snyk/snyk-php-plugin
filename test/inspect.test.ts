@@ -20,15 +20,15 @@ const deepTestFolders = [
 ];
 
 deepTestFolders.forEach((folder) => {
-    tap.test('php plugin for ' + folder, async (t) => {
-        const projFolder = './test/stubs/' + folder;
-        const result = plugin.inspect(projFolder, 'composer.lock', options);
-        t.test('match packages with expected', (test) => {
-            const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf-8'));
-            test.deepEqual(result, expectedTree);
-            test.end();
-        });
+  tap.test('php plugin for ' + folder, async (t) => {
+    const projFolder = './test/stubs/' + folder;
+    const result = plugin.inspect(projFolder, 'composer.lock', options);
+    t.test('match packages with expected', (test) => {
+      const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf-8'));
+      test.deepEqual(result, expectedTree);
+      test.end();
     });
+  });
 });
 
 tap.test('php plugin for project with many deps', async (t) => {
@@ -83,23 +83,23 @@ tap.test('with alias, uses correct version', async (t) => {
   const { package: pkg } = plugin.inspect(projFolder, './composer.lock', options);
   const deps = pkg.dependencies;
   const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf-8'));
-  const {version}  = deps['symfony/monolog-bridge'];
+  const { version } = deps['symfony/monolog-bridge'];
   // remove the trailing .0
   const actualVersionInstalled = version.slice(0, -2);
   const expectedVersionString = composerJson.require && composerJson.require['symfony/monolog-bridge']; // '2.6 as 2.7'
   // real = 2.6, alias = 2.7
-  const [realVersion, aliasVersion] = expectedVersionString.split(' as ');
+  const [ realVersion, aliasVersion ] = expectedVersionString.split(' as ');
 
   t.test('so versions to real version and not alias', (test) => {
-      test.equal(actualVersionInstalled, realVersion, 'version mismatch');
-      test.notEqual(actualVersionInstalled, aliasVersion, 'matches alias!');
-      test.end();
+    test.equal(actualVersionInstalled, realVersion, 'version mismatch');
+    test.notEqual(actualVersionInstalled, aliasVersion, 'matches alias!');
+    test.end();
   });
 });
 
 tap.test('with alias in external repo', async (t) => {
   const projFolder = './test/stubs/proj_with_aliases_external_github';
-  const {package: pkg} =  plugin.inspect(projFolder, 'composer.lock', options);
+  const { package: pkg } = plugin.inspect(projFolder, 'composer.lock', options);
   const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf-8'));
   const composerJsonAlias = composerJson.require['symfony/monolog-bridge'];
   const aliasBranch = composerJsonAlias.split(' as ').shift().replace('dev-', '');
@@ -167,7 +167,7 @@ tap.test('versions inacurracy when composer is not installed', async (t) => {
 
   t.test('match packages with expected', (test) => {
     const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_no_system_versions.json'),
-        'utf-8'));
+      'utf-8'));
     test.deepEqual(result, expectedTree);
     test.end();
   });

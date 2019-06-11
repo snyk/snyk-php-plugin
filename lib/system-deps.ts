@@ -11,7 +11,7 @@ function isSet(variable): boolean {
 export function systemDeps(basePath: string, options: SystemPackagesOptions): SystemPackages {
   const composerOk = isSet(options.composerIsFine) ? options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd);
   const composerPharOk = isSet(options.composerPharIsFine) ?
-      options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharCmd);
+    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharCmd);
 
   let finalVersionsObj = {};
 
