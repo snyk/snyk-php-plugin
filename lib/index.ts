@@ -3,12 +3,14 @@ import * as composerLockFileParser from '@snyk/composer-lockfile-parser';
 import { systemDeps } from './system-deps';
 import { PhpPluginResult, SystemPackagesOptions } from './types';
 
-export function inspect(basePath: string, fileName: string, options: SystemPackagesOptions): PhpPluginResult {
+const PLUGIN_NAME = 'snyk-php-plugin';
+
+export async function inspect(basePath: string, fileName: string, options: SystemPackagesOptions = {}): Promise<PhpPluginResult> {
   const systemVersions = systemDeps(basePath, options);
   const depsTree = composerLockFileParser.buildDepTreeFromFiles(basePath, fileName, systemVersions);
 
-  return {
+  return Promise.resolve({
     package: depsTree,
-    plugin: { name: 'snyk-php-plugin', targetFile: fileName },
-  };
+    plugin: { name: PLUGIN_NAME, targetFile: fileName },
+  });
 }
