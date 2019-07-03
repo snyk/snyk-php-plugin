@@ -9,7 +9,9 @@
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "test": "npm run lint && npm run unit-test",
-    "unit-test": "tap -Rspec test/*.test.ts --timeout=300"
+    "unit-test": "tap -Rspec test/*.test.ts --timeout=300",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "files": [
     "dist"
@@ -25,7 +27,8 @@
     "node": ">=6"
   },
   "dependencies": {
-    "@snyk/composer-lockfile-parser": "1.0.2"
+    "@snyk/composer-lockfile-parser": "1.0.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@types/node": "6.14.6",
@@ -36,5 +39,6 @@
     "tap": "12.7.0",
     "tslib": "1.9.3",
     "typescript": "3.5.1"
-  }
+  },
+  "snyk": true
 }
