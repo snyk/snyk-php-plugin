@@ -25,7 +25,8 @@
     "node": ">=6"
   },
   "dependencies": {
-    "@snyk/composer-lockfile-parser": "1.0.3",
+    "@snyk/cli-interface": "2.2.0",
+    "@snyk/composer-lockfile-parser": "1.2.0",
     "tslib": "1.9.3"
   },
   "devDependencies": {

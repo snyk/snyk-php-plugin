@@ -1,4 +1,5 @@
 import { ComposerParserResponse } from '@snyk/composer-lockfile-parser';
+import { legacyPlugin } from '@snyk/cli-interface';
 
 export interface PhpPluginResult {
   plugin: PhpPlugin;
@@ -10,7 +11,7 @@ export interface PhpPlugin {
   targetFile: string;
 }
 
-export interface SystemPackagesOptions {
+export interface PhpOptions extends legacyPlugin.BaseInspectOptions {
   composerIsFine?: boolean;
   composerPharIsFine?: boolean;
   systemVersions?: object;

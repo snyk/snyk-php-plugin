@@ -2,13 +2,13 @@ import * as os from 'os';
 import { SystemPackages } from '@snyk/composer-lockfile-parser';
 
 import * as cmds from './composer-cmds';
-import { SystemPackagesOptions } from './types';
+import { PhpOptions } from './types';
 
 function isSet(variable): boolean {
   return typeof variable !== 'undefined';
 }
 
-export function systemDeps(basePath: string, options: SystemPackagesOptions): SystemPackages {
+export function systemDeps(basePath: string, options: PhpOptions): SystemPackages {
   const composerOk = isSet(options.composerIsFine) ? options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd);
   const composerPharOk = isSet(options.composerPharIsFine) ?
     options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharCmd);
