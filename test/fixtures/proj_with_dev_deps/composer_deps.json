@@ -1,0 +1,20 @@
+{
+  "plugin": {
+    "name": "snyk-php-plugin",
+    "targetFile": "composer.lock"
+  },
+  "package": {
+    "name": "simple/hello-php",
+    "version": "0.0.0",
+    "packageFormatVersion": "composer:0.0.1",
+    "hasDevDependencies": true,
+    "dependencies": {
+      "php": {
+        "name": "php",
+        "version": "7.1.12",
+        "dependencies": {},
+        "labels": { "scope": "prod" }
+      }
+    }
+  }
+}

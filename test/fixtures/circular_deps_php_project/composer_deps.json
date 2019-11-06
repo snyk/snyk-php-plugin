@@ -7,6 +7,7 @@
     "name": "circular/deps",
     "version": "4.0-dev",
     "packageFormatVersion": "composer:0.0.1",
+    "hasDevDependencies": false,
     "dependencies": {
       "php": {
         "name": "php",
@@ -23,12 +24,24 @@
                   "php": {
                     "name": "php",
                     "version": "7.1",
-                    "dependencies": {}
+                    "dependencies": {},
+                    "labels": {
+                      "scope": "prod"
+                    }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           }
+        },
+        "labels": {
+          "scope": "prod"
         }
       },
       "symfony/polyfill-mbstring": {
@@ -50,14 +63,29 @@
                       "php": {
                         "name": "php",
                         "version": "7.1",
-                        "dependencies": {}
+                        "dependencies": {},
+                        "labels": {
+                          "scope": "prod"
+                        }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           }
+        },
+        "labels": {
+          "scope": "prod"
         }
       },
       "symfony/debug": {
@@ -79,12 +107,24 @@
                       "php": {
                         "name": "php",
                         "version": "7.1",
-                        "dependencies": {}
+                        "dependencies": {},
+                        "labels": {
+                          "scope": "prod"
+                        }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "psr/log": {
@@ -106,22 +146,43 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           }
+        },
+        "labels": {
+          "scope": "prod"
         }
       },
       "ext-dom": {
         "name": "ext-dom",
         "version": "20031129",
-        "dependencies": {}
+        "dependencies": {},
+        "labels": {
+          "scope": "prod"
+        }
       },
       "phpunit/phpunit": {
         "name": "phpunit/phpunit",
@@ -130,27 +191,42 @@
           "ext-dom": {
             "name": "ext-dom",
             "version": "20031129",
-            "dependencies": {}
+            "dependencies": {},
+            "labels": {
+              "scope": "prod"
+            }
           },
           "ext-json": {
             "name": "ext-json",
             "version": "1.5.0",
-            "dependencies": {}
+            "dependencies": {},
+            "labels": {
+              "scope": "prod"
+            }
           },
           "ext-libxml": {
             "name": "ext-libxml",
             "version": "7.1.12",
-            "dependencies": {}
+            "dependencies": {},
+            "labels": {
+              "scope": "prod"
+            }
           },
           "ext-mbstring": {
             "name": "ext-mbstring",
             "version": "7.1.12",
-            "dependencies": {}
+            "dependencies": {},
+            "labels": {
+              "scope": "prod"
+            }
           },
           "ext-xml": {
             "name": "ext-xml",
             "version": "7.1.12",
-            "dependencies": {}
+            "dependencies": {},
+            "labels": {
+              "scope": "prod"
+            }
           },
           "myclabs/deep-copy": {
             "name": "myclabs/deep-copy",
@@ -171,14 +247,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phar-io/manifest": {
@@ -188,12 +279,18 @@
               "ext-dom": {
                 "name": "ext-dom",
                 "version": "20031129",
-                "dependencies": {}
+                "dependencies": {},
+                "labels": {
+                  "scope": "prod"
+                }
               },
               "ext-phar": {
                 "name": "ext-phar",
                 "version": "*",
-                "dependencies": {}
+                "dependencies": {},
+                "labels": {
+                  "scope": "prod"
+                }
               },
               "phar-io/version": {
                 "name": "phar-io/version",
@@ -214,14 +311,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "php": {
@@ -239,14 +351,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phar-io/version": {
@@ -268,14 +395,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "php": {
@@ -293,12 +435,24 @@
                       "php": {
                         "name": "php",
                         "version": "7.1",
-                        "dependencies": {}
+                        "dependencies": {},
+                        "labels": {
+                          "scope": "prod"
+                        }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpspec/prophecy": {
@@ -320,12 +474,24 @@
                           "doctrine/instantiator": {
                             "name": "doctrine/instantiator",
                             "version": "1.2.x-dev",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "php": {
@@ -343,12 +509,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "phpdocumentor/reflection-docblock": {
@@ -370,12 +548,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "phpdocumentor/reflection-common": {
@@ -397,14 +587,29 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "phpdocumentor/type-resolver": {
@@ -426,12 +631,24 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       },
                       "phpdocumentor/reflection-common": {
@@ -453,16 +670,34 @@
                                       "php": {
                                         "name": "php",
                                         "version": "7.1",
-                                        "dependencies": {}
+                                        "dependencies": {},
+                                        "labels": {
+                                          "scope": "prod"
+                                        }
                                       }
+                                    },
+                                    "labels": {
+                                      "scope": "prod"
                                     }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "webmozart/assert": {
@@ -484,16 +719,34 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/comparator": {
@@ -515,12 +768,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "sebastian/diff": {
@@ -542,14 +807,29 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "sebastian/exporter": {
@@ -571,12 +851,24 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       },
                       "sebastian/recursion-context": {
@@ -598,18 +890,39 @@
                                       "php": {
                                         "name": "php",
                                         "version": "7.1",
-                                        "dependencies": {}
+                                        "dependencies": {},
+                                        "labels": {
+                                          "scope": "prod"
+                                        }
                                       }
+                                    },
+                                    "labels": {
+                                      "scope": "prod"
                                     }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/recursion-context": {
@@ -631,16 +944,34 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpunit/php-code-coverage": {
@@ -650,12 +981,18 @@
               "ext-dom": {
                 "name": "ext-dom",
                 "version": "20031129",
-                "dependencies": {}
+                "dependencies": {},
+                "labels": {
+                  "scope": "prod"
+                }
               },
               "ext-xmlwriter": {
                 "name": "ext-xmlwriter",
                 "version": "7.1.12",
-                "dependencies": {}
+                "dependencies": {},
+                "labels": {
+                  "scope": "prod"
+                }
               },
               "php": {
                 "name": "php",
@@ -672,12 +1009,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "phpunit/php-file-iterator": {
@@ -699,14 +1048,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "phpunit/php-text-template": {
@@ -728,14 +1092,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "phpunit/php-token-stream": {
@@ -745,7 +1124,10 @@
                   "ext-tokenizer": {
                     "name": "ext-tokenizer",
                     "version": "7.1.12",
-                    "dependencies": {}
+                    "dependencies": {},
+                    "labels": {
+                      "scope": "prod"
+                    }
                   },
                   "php": {
                     "name": "php",
@@ -762,14 +1144,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/code-unit-reverse-lookup": {
@@ -791,14 +1188,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/environment": {
@@ -820,14 +1232,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/version": {
@@ -849,14 +1276,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "theseer/tokenizer": {
@@ -866,17 +1308,26 @@
                   "ext-dom": {
                     "name": "ext-dom",
                     "version": "20031129",
-                    "dependencies": {}
+                    "dependencies": {},
+                    "labels": {
+                      "scope": "prod"
+                    }
                   },
                   "ext-tokenizer": {
                     "name": "ext-tokenizer",
                     "version": "7.1.12",
-                    "dependencies": {}
+                    "dependencies": {},
+                    "labels": {
+                      "scope": "prod"
+                    }
                   },
                   "ext-xmlwriter": {
                     "name": "ext-xmlwriter",
                     "version": "7.1.12",
-                    "dependencies": {}
+                    "dependencies": {},
+                    "labels": {
+                      "scope": "prod"
+                    }
                   },
                   "php": {
                     "name": "php",
@@ -893,16 +1344,34 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpunit/php-file-iterator": {
@@ -924,14 +1393,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpunit/php-text-template": {
@@ -953,14 +1437,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpunit/php-timer": {
@@ -982,14 +1481,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "phpunit/phpunit-mock-objects": {
@@ -1011,12 +1525,24 @@
                           "doctrine/instantiator": {
                             "name": "doctrine/instantiator",
                             "version": "1.2.x-dev",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "php": {
@@ -1034,12 +1560,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "phpunit/php-text-template": {
@@ -1061,14 +1599,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/exporter": {
@@ -1090,12 +1643,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "sebastian/recursion-context": {
@@ -1117,18 +1682,39 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/comparator": {
@@ -1150,12 +1736,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/diff": {
@@ -1177,14 +1775,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/exporter": {
@@ -1206,12 +1819,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "sebastian/recursion-context": {
@@ -1233,18 +1858,39 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/diff": {
@@ -1266,14 +1912,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/environment": {
@@ -1295,14 +1956,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/exporter": {
@@ -1324,12 +2000,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/recursion-context": {
@@ -1351,16 +2039,34 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/global-state": {
@@ -1382,14 +2088,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/object-enumerator": {
@@ -1411,12 +2132,24 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/object-reflector": {
@@ -1438,14 +2171,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "sebastian/recursion-context": {
@@ -1467,16 +2215,34 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/resource-operations": {
@@ -1498,14 +2264,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "sebastian/version": {
@@ -1527,16 +2308,34 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           }
+        },
+        "labels": {
+          "scope": "prod"
         }
       },
       "okaufmann/swiss-weather-api": {
@@ -1566,14 +2365,29 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "guzzlehttp/psr7": {
@@ -1595,12 +2409,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "psr/http-message": {
@@ -1622,16 +2448,34 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "php": {
@@ -1649,14 +2493,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "illuminate/support": {
@@ -1678,18 +2537,33 @@
                           "doctrine/inflector": {
                             "name": "doctrine/inflector",
                             "version": "1.3.x-dev",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "ext-mbstring": {
                 "name": "ext-mbstring",
                 "version": "7.1.12",
-                "dependencies": {}
+                "dependencies": {},
+                "labels": {
+                  "scope": "prod"
+                }
               },
               "illuminate/contracts": {
                 "name": "illuminate/contracts",
@@ -1710,12 +2584,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "psr/container": {
@@ -1737,14 +2623,29 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "psr/simple-cache": {
@@ -1766,16 +2667,34 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "nesbot/carbon": {
@@ -1797,12 +2716,24 @@
                               "php": {
                                 "name": "php",
                                 "version": "7.1",
-                                "dependencies": {}
+                                "dependencies": {},
+                                "labels": {
+                                  "scope": "prod"
+                                }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   },
                   "symfony/translation": {
@@ -1824,12 +2755,24 @@
                                   "php": {
                                     "name": "php",
                                     "version": "7.1",
-                                    "dependencies": {}
+                                    "dependencies": {},
+                                    "labels": {
+                                      "scope": "prod"
+                                    }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       },
                       "symfony/polyfill-mbstring": {
@@ -1851,18 +2794,39 @@
                                       "php": {
                                         "name": "php",
                                         "version": "7.1",
-                                        "dependencies": {}
+                                        "dependencies": {},
+                                        "labels": {
+                                          "scope": "prod"
+                                        }
                                       }
+                                    },
+                                    "labels": {
+                                      "scope": "prod"
                                     }
                                   }
+                                },
+                                "labels": {
+                                  "scope": "prod"
                                 }
                               }
+                            },
+                            "labels": {
+                              "scope": "prod"
                             }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               },
               "php": {
@@ -1880,14 +2844,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "kevinrob/guzzle-cache-middleware": {
@@ -1909,14 +2888,29 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "php": {
@@ -1934,12 +2928,24 @@
                       "php": {
                         "name": "php",
                         "version": "7.1",
-                        "dependencies": {}
+                        "dependencies": {},
+                        "labels": {
+                          "scope": "prod"
+                        }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           },
           "spatie/regex": {
@@ -1961,16 +2967,34 @@
                           "php": {
                             "name": "php",
                             "version": "7.1",
-                            "dependencies": {}
+                            "dependencies": {},
+                            "labels": {
+                              "scope": "prod"
+                            }
                           }
+                        },
+                        "labels": {
+                          "scope": "prod"
                         }
                       }
+                    },
+                    "labels": {
+                      "scope": "prod"
                     }
                   }
+                },
+                "labels": {
+                  "scope": "prod"
                 }
               }
+            },
+            "labels": {
+              "scope": "prod"
             }
           }
+        },
+        "labels": {
+          "scope": "prod"
         }
       }
     }
