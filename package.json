@@ -27,7 +27,7 @@
   "dependencies": {
     "@snyk/cli-interface": "2.2.0",
     "@snyk/composer-lockfile-parser": "1.2.0",
-    "tslib": "1.9.3"
+    "tslib": "1.10.0"
   },
   "devDependencies": {
     "@types/node": "6.14.6",
@@ -36,6 +36,6 @@
     "eslint": "5.16.0",
     "sync-request": "3.0.1",
     "tap": "12.7.0",
-    "typescript": "3.5.1"
+    "typescript": "3.7.3"
   }
 }
