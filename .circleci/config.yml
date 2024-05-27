@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   win: circleci/windows@2.4.0
-  prodsec: snyk/prodsec-orb@1.0
+  prodsec: snyk/prodsec-orb@1
 
 defaults: &defaults
   parameters:
@@ -48,6 +48,21 @@ commands:
           command: npm --version
 
 jobs:
+  security-scans:
+    resource_class: small
+    <<: *defaults
+    docker:
+      - image: circleci/node:<< parameters.node_version >>
+    steps:
+      - checkout
+      - install_deps
+      - show_node_version
+      - prodsec/security_scans:
+          mode: auto
+          release-branch: master
+          open-source-additional-arguments: --exclude=test
+          iac-scan: disabled
+
   lint:
     <<: *defaults
     docker:
@@ -107,6 +122,17 @@ workflows:
         context:
           - snyk-bot-slack
         channel: os-team-managed-alerts
+        filters:
+          branches:
+            ignore:
+              - master
+
+    - security-scans:
+        name: Security Scans
+        node_version: "10"
+        context:
+          - open_source-managed
+          - nodejs-install
 
     - lint:
         name: Lint
