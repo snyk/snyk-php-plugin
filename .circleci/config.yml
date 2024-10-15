@@ -52,7 +52,7 @@ jobs:
     resource_class: small
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -66,7 +66,7 @@ jobs:
   lint:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -92,7 +92,7 @@ jobs:
   test-unix:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -104,10 +104,11 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     resource_class: small
     steps:
       - checkout
+      - run: sudo npm i -g semantic-release@22 @semantic-release/exec pkg
       - install_deps
       - run:
           name: Publish to GitHub
@@ -211,7 +212,7 @@ workflows:
     - release:
         name: Release
         context: nodejs-app-release
-        node_version: "14.17.0"
+        node_version: "20.18"
         filters:
           branches:
             only:
