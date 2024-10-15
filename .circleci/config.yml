@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  win: circleci/windows@2.4.0
+  win: circleci/windows@5.0.0
   prodsec: snyk/prodsec-orb@1
 
 defaults: &defaults
@@ -16,6 +16,16 @@ windows_defaults: &windows_defaults
     npm_config_loglevel: silent
   executor:
     name: win/default
+
+test_matrix_unix: &test_matrix_unix
+  matrix:
+    parameters:
+      node_version: [ '16.18', '18.18', '20.9' ]
+
+test_matrix_win: &test_matrix_win
+  matrix:
+    parameters:
+      node_version: [ '16', '18', '20' ]
 
 commands:
   install_deps:
@@ -52,7 +62,7 @@ jobs:
     resource_class: small
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -66,7 +76,7 @@ jobs:
   lint:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -92,7 +102,7 @@ jobs:
   test-unix:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     steps:
       - checkout
       - install_deps
@@ -104,10 +114,11 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: circleci/node:<< parameters.node_version >>
+      - image: cimg/node:<< parameters.node_version >>
     resource_class: small
     steps:
       - checkout
+      - run: sudo npm i -g semantic-release@22 @semantic-release/exec pkg
       - install_deps
       - run:
           name: Publish to GitHub
@@ -129,7 +140,7 @@ workflows:
 
     - security-scans:
         name: Security Scans
-        node_version: "10"
+        node_version: "20.18"
         context:
           - open_source-managed
           - nodejs-install
@@ -137,7 +148,7 @@ workflows:
     - lint:
         name: Lint
         context: nodejs-install
-        node_version: "10"
+        node_version: "20.18"
         filters:
           branches:
             ignore:
@@ -145,29 +156,9 @@ workflows:
 
     # UNIX tests
     - test-unix:
-        name: Unix Tests for Node=12
+        name: Test OS=Unix Node=<<matrix.node_version>>
         context: nodejs-install
-        node_version: "12"
-        requires:
-          - Lint
-        filters:
-          branches:
-            ignore:
-              - master
-    - test-unix:
-        name: Unix Tests for Node=10
-        context: nodejs-install
-        node_version: "10"
-        requires:
-          - Lint
-        filters:
-          branches:
-            ignore:
-              - master
-    - test-unix:
-        name: Unix Tests for Node=8
-        context: nodejs-install
-        node_version: "8"
+        <<: *test_matrix_unix
         requires:
           - Lint
         filters:
@@ -177,29 +168,9 @@ workflows:
 
     # Windows tests
     - test-windows:
-        name: Windows Tests for Node=12
+        name: Test OS=Windows Node=<<matrix.node_version>>
         context: nodejs-install
-        node_version: "12.0.0"
-        requires:
-          - Lint
-        filters:
-          branches:
-            ignore:
-              - master
-    - test-windows:
-        name: Windows Tests for Node=10
-        context: nodejs-install
-        node_version: "10.21.0"
-        requires:
-          - Lint
-        filters:
-          branches:
-            ignore:
-              - master
-    - test-windows:
-        name: Windows Tests for Node=8
-        context: nodejs-install
-        node_version: "8.17.0"
+        <<: *test_matrix_win
         requires:
           - Lint
         filters:
@@ -211,7 +182,7 @@ workflows:
     - release:
         name: Release
         context: nodejs-app-release
-        node_version: "14.17.0"
+        node_version: "20.18"
         filters:
           branches:
             only:
