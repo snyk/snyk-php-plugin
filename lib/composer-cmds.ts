@@ -8,20 +8,32 @@ export const pharVersionCmd = {
   args: [`${path.resolve(path.resolve() + '/composer.phar')}`, '--version']
 };
 export const pharShowCmd = {
-  command: `php`, args: [`${path.resolve(path.resolve() + '/composer.phar')}`, 'show', '-p', '--format=json']
+  command: `php`,
+  args: [`${path.resolve(path.resolve() + '/composer.phar')}`, 'show', '-p', '--format=json']
 };
 
-export function cmdReturnsOk(cmd, args: string[] = []): boolean {
-  const spawnOptions: childProcess.SpawnOptions = { shell: false };
-  return cmd && childProcess.spawnSync(cmd, args, spawnOptions).status === 0;
+function cleanUpComposerWarnings(composerOutput: string): string {
+  // Remove all lines preceding the JSON data; including Deprecation messages and blank lines.
+  const lines = composerOutput.split('\n');
+  const jsonStartIndex = lines.findIndex((line) => line.length > 0 && !line.startsWith('Deprecated:'));
+
+  return lines.slice(jsonStartIndex).join('\n');
+}
+
+export function cmdReturnsOk(cmd: string, args: string[] = []): boolean {
+  const spawnOptions: childProcess.SpawnOptions = {shell: false};
+  return !!cmd && childProcess.spawnSync(cmd, args, spawnOptions).status === 0;
 }
 
 // run a cmd in a specific folder and it's result should be there
-export function execWithResult(cmd, basePath, args: string[] = []): string {
-  const spawnOptions: childProcess.SpawnOptions = { cwd: basePath, shell: false }
+export function execWithResult(cmd: string, basePath: string, args: string[] = []): string {
+  const spawnOptions: childProcess.SpawnOptions = {cwd: basePath, shell: false}
   const execResult = childProcess.spawnSync(cmd, args, spawnOptions);
+
+  // Throw the whole Result object in case of error, similarly to `execSync`.
   if (execResult.status !== 0) {
     throw execResult;
   }
-  return execResult.stdout.toString();
+
+  return cleanUpComposerWarnings(execResult.stdout.toString());
 }

@@ -207,3 +207,21 @@ tap.test('project name is not empty', async (t) => {
     test.end();
   });
 });
+
+tap.test('project with composer deprecations [no system version stubs]', async (t) => {
+  const projFolder = './test/fixtures/project_with_composer_deprecations';
+  // Use the fake composer.phar file to output system dependencies.
+  const options = {
+    composerIsFine: false,
+    composerPharIsFine: true,
+    systemVersions: [],
+  };
+
+  const result = await plugin.inspect(projFolder, 'composer.lock', options);
+
+  t.test('match packages with expected', (test) => {
+    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf-8'));
+    test.deepEqual(result, expectedTree);
+    test.end();
+  });
+});

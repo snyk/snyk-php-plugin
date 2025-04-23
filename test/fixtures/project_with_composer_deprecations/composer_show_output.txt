@@ -1,0 +1,426 @@
+Deprecated: Composer\Factory::createConfig(): Implicitly marking parameter $io as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 153
+
+Deprecated: Composer\Factory::createDefaultRepositories(): Implicitly marking parameter $io as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 249
+
+Deprecated: Composer\Factory::createDefaultRepositories(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 249
+
+Deprecated: Composer\Factory::createDefaultRepositories(): Implicitly marking parameter $rm as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 249
+
+Deprecated: Composer\Factory::createDownloadManager(): Implicitly marking parameter $eventDispatcher as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 454
+
+Deprecated: Composer\Factory::createDownloadManager(): Implicitly marking parameter $rfs as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 454
+
+Deprecated: Composer\Factory::createArchiveManager(): Implicitly marking parameter $dm as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 504
+
+Deprecated: Composer\Factory::createPluginManager(): Implicitly marking parameter $globalComposer as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 526
+
+Deprecated: Composer\Factory::createRemoteFilesystem(): Implicitly marking parameter $config as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Factory.php on line 585
+
+Deprecated: Symfony\Component\Console\Formatter\OutputFormatterStyleStack::__construct(): Implicitly marking parameter $emptyStyle as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Formatter/OutputFormatterStyleStack.php on line 28
+
+Deprecated: Symfony\Component\Console\Formatter\OutputFormatterStyleStack::pop(): Implicitly marking parameter $style as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Formatter/OutputFormatterStyleStack.php on line 57
+
+Deprecated: Symfony\Component\Console\Output\ConsoleOutput::__construct(): Implicitly marking parameter $formatter as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Output/ConsoleOutput.php on line 38
+
+Deprecated: Symfony\Component\Console\Output\StreamOutput::__construct(): Implicitly marking parameter $formatter as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Output/StreamOutput.php on line 43
+
+Deprecated: Symfony\Component\Console\Output\Output::__construct(): Implicitly marking parameter $formatter as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Output/Output.php on line 40
+
+Deprecated: Composer\Console\Application::run(): Implicitly marking parameter $input as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Console/Application.php on line 94
+
+Deprecated: Composer\Console\Application::run(): Implicitly marking parameter $output as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Console/Application.php on line 94
+
+Deprecated: Symfony\Component\Console\Application::run(): Implicitly marking parameter $input as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Application.php on line 103
+
+Deprecated: Symfony\Component\Console\Application::run(): Implicitly marking parameter $output as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Application.php on line 103
+
+Deprecated: Constant E_STRICT is deprecated in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Util/Silencer.php on line 36
+
+Deprecated: Symfony\Component\Console\Input\ArgvInput::__construct(): Implicitly marking parameter $argv as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Input/ArgvInput.php on line 50
+
+Deprecated: Symfony\Component\Console\Input\ArgvInput::__construct(): Implicitly marking parameter $definition as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Input/ArgvInput.php on line 50
+
+Deprecated: Symfony\Component\Console\Input\Input::__construct(): Implicitly marking parameter $definition as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Input/Input.php on line 35
+
+Deprecated: Symfony\Component\Console\Helper\HelperSet::setCommand(): Implicitly marking parameter $command as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/HelperSet.php on line 94
+
+Deprecated: Return type of Symfony\Component\Console\Helper\HelperSet::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/HelperSet.php on line 112
+
+Deprecated: Symfony\Component\Console\Helper\Helper::setHelperSet(): Implicitly marking parameter $helperSet as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/Helper.php on line 28
+
+Deprecated: Symfony\Component\Console\Helper\HelperInterface::setHelperSet(): Implicitly marking parameter $helperSet as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/HelperInterface.php on line 24
+
+Deprecated: Symfony\Component\Console\Helper\DialogHelper::ask(): Implicitly marking parameter $autocomplete as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/DialogHelper.php on line 116
+
+Deprecated: Symfony\Component\Console\Helper\DialogHelper::askAndValidate(): Implicitly marking parameter $autocomplete as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/vendor/symfony/console/Helper/DialogHelper.php on line 362
+
+Deprecated: Composer\Util\ErrorHandler::register(): Implicitly marking parameter $io as nullable is deprecated, the explicit nullable type must be used instead in phar:///Users/nicolas/projects/snyk-php-plugin/composer.phar/src/Composer/Util/ErrorHandler.php on line 73
+{
+    "platform": [
+        {
+            "name": "composer-plugin-api",
+            "version": "1.1.0",
+            "description": "The Composer Plugin API"
+        },
+        {
+            "name": "ext-bcmath",
+            "version": "8.4.6",
+            "description": "The bcmath PHP extension"
+        },
+        {
+            "name": "ext-bz2",
+            "version": "8.4.6",
+            "description": "The bz2 PHP extension"
+        },
+        {
+            "name": "ext-calendar",
+            "version": "8.4.6",
+            "description": "The calendar PHP extension"
+        },
+        {
+            "name": "ext-ctype",
+            "version": "8.4.6",
+            "description": "The ctype PHP extension"
+        },
+        {
+            "name": "ext-curl",
+            "version": "8.4.6",
+            "description": "The curl PHP extension"
+        },
+        {
+            "name": "ext-date",
+            "version": "8.4.6",
+            "description": "The date PHP extension"
+        },
+        {
+            "name": "ext-dba",
+            "version": "8.4.6",
+            "description": "The dba PHP extension"
+        },
+        {
+            "name": "ext-dom",
+            "version": "20031129",
+            "description": "The dom PHP extension"
+        },
+        {
+            "name": "ext-exif",
+            "version": "8.4.6",
+            "description": "The exif PHP extension"
+        },
+        {
+            "name": "ext-FFI",
+            "version": "8.4.6",
+            "description": "The FFI PHP extension"
+        },
+        {
+            "name": "ext-fileinfo",
+            "version": "8.4.6",
+            "description": "The fileinfo PHP extension"
+        },
+        {
+            "name": "ext-filter",
+            "version": "8.4.6",
+            "description": "The filter PHP extension"
+        },
+        {
+            "name": "ext-ftp",
+            "version": "8.4.6",
+            "description": "The ftp PHP extension"
+        },
+        {
+            "name": "ext-gd",
+            "version": "8.4.6",
+            "description": "The gd PHP extension"
+        },
+        {
+            "name": "ext-gettext",
+            "version": "8.4.6",
+            "description": "The gettext PHP extension"
+        },
+        {
+            "name": "ext-gmp",
+            "version": "8.4.6",
+            "description": "The gmp PHP extension"
+        },
+        {
+            "name": "ext-hash",
+            "version": "8.4.6",
+            "description": "The hash PHP extension"
+        },
+        {
+            "name": "ext-iconv",
+            "version": "8.4.6",
+            "description": "The iconv PHP extension"
+        },
+        {
+            "name": "ext-intl",
+            "version": "8.4.6",
+            "description": "The intl PHP extension"
+        },
+        {
+            "name": "ext-json",
+            "version": "8.4.6",
+            "description": "The json PHP extension"
+        },
+        {
+            "name": "ext-ldap",
+            "version": "8.4.6",
+            "description": "The ldap PHP extension"
+        },
+        {
+            "name": "ext-libxml",
+            "version": "8.4.6",
+            "description": "The libxml PHP extension"
+        },
+        {
+            "name": "ext-mbstring",
+            "version": "8.4.6",
+            "description": "The mbstring PHP extension"
+        },
+        {
+            "name": "ext-mysqli",
+            "version": "8.4.6",
+            "description": "The mysqli PHP extension"
+        },
+        {
+            "name": "ext-mysqlnd",
+            "version": "0",
+            "description": "The mysqlnd PHP extension (actual version: mysqlnd 8.4.6)"
+        },
+        {
+            "name": "ext-odbc",
+            "version": "8.4.6",
+            "description": "The odbc PHP extension"
+        },
+        {
+            "name": "ext-openssl",
+            "version": "8.4.6",
+            "description": "The openssl PHP extension"
+        },
+        {
+            "name": "ext-pcntl",
+            "version": "8.4.6",
+            "description": "The pcntl PHP extension"
+        },
+        {
+            "name": "ext-pcre",
+            "version": "8.4.6",
+            "description": "The pcre PHP extension"
+        },
+        {
+            "name": "ext-PDO",
+            "version": "8.4.6",
+            "description": "The PDO PHP extension"
+        },
+        {
+            "name": "ext-pdo_dblib",
+            "version": "8.4.6",
+            "description": "The pdo_dblib PHP extension"
+        },
+        {
+            "name": "ext-pdo_mysql",
+            "version": "8.4.6",
+            "description": "The pdo_mysql PHP extension"
+        },
+        {
+            "name": "ext-PDO_ODBC",
+            "version": "8.4.6",
+            "description": "The PDO_ODBC PHP extension"
+        },
+        {
+            "name": "ext-pdo_pgsql",
+            "version": "8.4.6",
+            "description": "The pdo_pgsql PHP extension"
+        },
+        {
+            "name": "ext-pdo_sqlite",
+            "version": "8.4.6",
+            "description": "The pdo_sqlite PHP extension"
+        },
+        {
+            "name": "ext-pgsql",
+            "version": "8.4.6",
+            "description": "The pgsql PHP extension"
+        },
+        {
+            "name": "ext-Phar",
+            "version": "8.4.6",
+            "description": "The Phar PHP extension"
+        },
+        {
+            "name": "ext-posix",
+            "version": "8.4.6",
+            "description": "The posix PHP extension"
+        },
+        {
+            "name": "ext-random",
+            "version": "8.4.6",
+            "description": "The random PHP extension"
+        },
+        {
+            "name": "ext-readline",
+            "version": "8.4.6",
+            "description": "The readline PHP extension"
+        },
+        {
+            "name": "ext-Reflection",
+            "version": "8.4.6",
+            "description": "The Reflection PHP extension"
+        },
+        {
+            "name": "ext-session",
+            "version": "8.4.6",
+            "description": "The session PHP extension"
+        },
+        {
+            "name": "ext-shmop",
+            "version": "8.4.6",
+            "description": "The shmop PHP extension"
+        },
+        {
+            "name": "ext-SimpleXML",
+            "version": "8.4.6",
+            "description": "The SimpleXML PHP extension"
+        },
+        {
+            "name": "ext-snmp",
+            "version": "8.4.6",
+            "description": "The snmp PHP extension"
+        },
+        {
+            "name": "ext-soap",
+            "version": "8.4.6",
+            "description": "The soap PHP extension"
+        },
+        {
+            "name": "ext-sockets",
+            "version": "8.4.6",
+            "description": "The sockets PHP extension"
+        },
+        {
+            "name": "ext-sodium",
+            "version": "8.4.6",
+            "description": "The sodium PHP extension"
+        },
+        {
+            "name": "ext-SPL",
+            "version": "8.4.6",
+            "description": "The SPL PHP extension"
+        },
+        {
+            "name": "ext-sqlite3",
+            "version": "8.4.6",
+            "description": "The sqlite3 PHP extension"
+        },
+        {
+            "name": "ext-sysvmsg",
+            "version": "8.4.6",
+            "description": "The sysvmsg PHP extension"
+        },
+        {
+            "name": "ext-sysvsem",
+            "version": "8.4.6",
+            "description": "The sysvsem PHP extension"
+        },
+        {
+            "name": "ext-sysvshm",
+            "version": "8.4.6",
+            "description": "The sysvshm PHP extension"
+        },
+        {
+            "name": "ext-tidy",
+            "version": "8.4.6",
+            "description": "The tidy PHP extension"
+        },
+        {
+            "name": "ext-tokenizer",
+            "version": "8.4.6",
+            "description": "The tokenizer PHP extension"
+        },
+        {
+            "name": "ext-xml",
+            "version": "8.4.6",
+            "description": "The xml PHP extension"
+        },
+        {
+            "name": "ext-xmlreader",
+            "version": "8.4.6",
+            "description": "The xmlreader PHP extension"
+        },
+        {
+            "name": "ext-xmlwriter",
+            "version": "8.4.6",
+            "description": "The xmlwriter PHP extension"
+        },
+        {
+            "name": "ext-xsl",
+            "version": "8.4.6",
+            "description": "The xsl PHP extension"
+        },
+        {
+            "name": "ext-Zend-OPcache",
+            "version": "8.4.6",
+            "description": "The Zend OPcache PHP extension"
+        },
+        {
+            "name": "ext-zip",
+            "version": "1.22.5",
+            "description": "The zip PHP extension"
+        },
+        {
+            "name": "ext-zlib",
+            "version": "8.4.6",
+            "description": "The zlib PHP extension"
+        },
+        {
+            "name": "lib-curl",
+            "version": "8.13.0",
+            "description": "The curl PHP library"
+        },
+        {
+            "name": "lib-iconv",
+            "version": "1.11",
+            "description": "The iconv PHP library"
+        },
+        {
+            "name": "lib-ICU",
+            "version": "77.1",
+            "description": "The intl PHP library"
+        },
+        {
+            "name": "lib-libxml",
+            "version": "2.9.13",
+            "description": "The libxml PHP library"
+        },
+        {
+            "name": "lib-openssl",
+            "version": "3.4.1",
+            "description": "OpenSSL 3.4.1 11 Feb 2025"
+        },
+        {
+            "name": "lib-pcre",
+            "version": "10.45",
+            "description": "The pcre PHP library"
+        },
+        {
+            "name": "lib-xsl",
+            "version": "1.1.35",
+            "description": "The xsl PHP library"
+        },
+        {
+            "name": "php",
+            "version": "8.4.6",
+            "description": "The PHP interpreter"
+        },
+        {
+            "name": "php-64bit",
+            "version": "8.4.6",
+            "description": "The PHP interpreter, 64bit"
+        },
+        {
+            "name": "php-ipv6",
+            "version": "8.4.6",
+            "description": "The PHP interpreter, with IPv6 support"
+        }
+    ]
+}
