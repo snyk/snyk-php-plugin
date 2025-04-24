@@ -56,7 +56,7 @@ commands:
       - run:
           name: NPM version
           command: npm --version
-  install_php:
+  install_php_unix:
     description: Install PHP
     steps:
       - run:
@@ -64,7 +64,16 @@ commands:
           command: |
             sudo add-apt-repository -y ppa:ondrej/php
             sudo apt-get update -y
-            sudo apt-get install -y php8.4
+            sudo apt-get install -y php-cli
+      - run:
+          name: Confirm installed PHP version
+          command: php -v
+  install_php_windows:
+    description: Install PHP
+    steps:
+      - run:
+          name: Install PHP
+          command: choco install php
       - run:
           name: Confirm installed PHP version
           command: php -v
@@ -93,7 +102,6 @@ jobs:
       - checkout
       - install_deps
       - show_node_version
-      - install_php
       - run:
           name: Run lint
           command: npm run lint
@@ -108,7 +116,7 @@ jobs:
           node_version: << parameters.node_version >>
       - install_deps
       - show_node_version
-      - install_php
+      - install_php_windows
       - run:
           name: Run tests
           command: npm test
@@ -121,7 +129,7 @@ jobs:
       - checkout
       - install_deps
       - show_node_version
-      - install_php
+      - install_php_unix
       - run:
           name: Run tests
           command: npm test
