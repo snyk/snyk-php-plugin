@@ -9,4 +9,6 @@
 $deps_stub_file = getcwd() . '/composer_show_output.txt';
 if (isset($argv[1]) && $argv[1] === 'show' && file_exists($deps_stub_file)) {
     echo file_get_contents($deps_stub_file);
+} else {
+    echo "WARNING: This is NOT the real composer.phar; this script is for tests only!\n";
 }

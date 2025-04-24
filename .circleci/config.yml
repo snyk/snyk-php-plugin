@@ -56,6 +56,18 @@ commands:
       - run:
           name: NPM version
           command: npm --version
+  install_php:
+    description: Install PHP
+    steps:
+      - run:
+          name: Install PHP
+          command: |
+            sudo add-apt-repository -y ppa:ondrej/php
+            sudo apt-get update -y
+            sudo apt-get install -y php8.4
+      - run:
+          name: Confirm installed PHP version
+          command: php -v
 
 jobs:
   security-scans:
@@ -81,6 +93,7 @@ jobs:
       - checkout
       - install_deps
       - show_node_version
+      - install_php
       - run:
           name: Run lint
           command: npm run lint
@@ -95,6 +108,7 @@ jobs:
           node_version: << parameters.node_version >>
       - install_deps
       - show_node_version
+      - install_php
       - run:
           name: Run tests
           command: npm test
@@ -107,6 +121,7 @@ jobs:
       - checkout
       - install_deps
       - show_node_version
+      - install_php
       - run:
           name: Run tests
           command: npm test
