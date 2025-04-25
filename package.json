@@ -9,7 +9,7 @@
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "test": "npm run lint && npm run unit-test",
-    "unit-test": "tap -Rspec test/*.test.ts --timeout=300"
+    "unit-test": "jest --testTimeout=300"
   },
   "files": [
     "dist",
@@ -37,7 +37,7 @@
     "@typescript-eslint/parser": "1.10.2",
     "eslint": "5.16.0",
     "sync-request": "3.0.1",
-    "tap": "12.7.0",
-    "typescript": "3.8.3"
+    "ts-jest": "^29.3.2",
+    "typescript": "5.8.3"
   }
 }
