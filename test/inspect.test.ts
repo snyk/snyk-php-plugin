@@ -26,7 +26,7 @@ deepTestFolders.forEach((folder) => {
     const projFolder = './test/fixtures/' + folder;
     const result = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
     t.test('match packages with expected', (test) => {
-      const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf-8'));
+      const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'));
       test.deepEqual(result, expectedTree);
       test.end();
     });
@@ -37,7 +37,7 @@ tap.test('dev dependencies are not parsed by default', async (t) => {
   const projFolder = './test/fixtures/proj_with_dev_deps';
   const result = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
   t.test('match packages with expected', (test) => {
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf-8'));
+    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'));
     test.deepEqual(result, expectedTree);
     test.end();
   });
@@ -47,7 +47,7 @@ tap.test('dev dependencies are parsed when include dev true', async (t) => {
   const projFolder = './test/fixtures/proj_with_dev_deps';
   const result = await plugin.inspect(projFolder, 'composer.lock', systemVersionsAndDevOptions);
   t.test('match packages with expected', (test) => {
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_with_dev.json'), 'utf-8'));
+    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_with_dev.json'), 'utf8'));
     test.deepEqual(result, expectedTree);
     test.end();
   });
@@ -104,7 +104,7 @@ tap.test('with alias, uses correct version', async (t) => {
   const projFolder = './test/fixtures/proj_with_aliases';
   const { package: pkg } = await plugin.inspect(projFolder, './composer.lock', systemVersionsOptions);
   const deps = pkg.dependencies;
-  const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf-8'));
+  const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'));
   const { version } = deps['symfony/monolog-bridge'];
   // remove the trailing .0
   const actualVersionInstalled = version.slice(0, -2);
@@ -122,7 +122,7 @@ tap.test('with alias, uses correct version', async (t) => {
 tap.test('with alias in external repo', async (t) => {
   const projFolder = './test/fixtures/proj_with_aliases_external_github';
   const { package: pkg } = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
-  const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf-8'));
+  const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'));
   const composerJsonAlias = composerJson.require['symfony/monolog-bridge'];
   const aliasBranch = composerJsonAlias.split(' as ').shift().replace('dev-', '');
 
@@ -184,14 +184,14 @@ tap.test('versions inacurracy when composer is not installed', async (t) => {
   const options = {
     composerIsFine: false,
     composerPharIsFine: false,
-    systemVersions: [],
+    systemVersions: {},
   };
 
   const result = await plugin.inspect(projFolder, 'composer.lock', options);
 
   t.test('match packages with expected', (test) => {
     const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_no_system_versions.json'),
-      'utf-8'));
+      'utf8'));
     test.deepEqual(result, expectedTree);
     test.end();
   });
@@ -214,7 +214,7 @@ tap.test('project with composer deprecations [no system version stubs]', async (
   const options = {
     composerIsFine: false,
     composerPharIsFine: true,
-    systemVersions: [],
+    systemVersions: {},
   };
 
   const result = await plugin.inspect(projFolder, 'composer.lock', options);
