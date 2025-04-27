@@ -1,34 +1,27 @@
-import * as os from 'os';
-import { SystemPackages } from '@snyk/composer-lockfile-parser';
+import {SystemPackages} from '@snyk/composer-lockfile-parser';
 
 import * as cmds from './composer-cmds';
-import { PhpOptions } from './types';
+import {PhpOptions} from './types';
 
-function isSet(variable): boolean {
+function isSet(variable: boolean | undefined): boolean {
   return typeof variable !== 'undefined';
 }
 
 export function systemDeps(basePath: string, options: PhpOptions): SystemPackages {
   const composerOk = isSet(options.composerIsFine) ?
-    options.composerIsFine : cmds.cmdReturnsOk(cmds.composerVersionCmd.command, cmds.composerVersionCmd.args);
+    options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd.command, [...cmds.composerCmd.args, ...cmds.versionArgs.args]);
   const composerPharOk = isSet(options.composerPharIsFine) ?
-    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharVersionCmd.command, cmds.pharVersionCmd.args);
+    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.composerPharCmd.command, [...cmds.composerPharCmd.args, ...cmds.versionArgs.args]);
 
   let finalVersionsObj = {};
 
   if (options.systemVersions && (Object.keys(options.systemVersions).length > 0)) {
     // give first preference to a stub
     finalVersionsObj = options.systemVersions;
-  } else if (composerOk) {
-    const lines = cmds.execWithResult(cmds.composerShowCmd.command, basePath, cmds.composerShowCmd.args).split(os.EOL);
-    lines.forEach((line) => {
-      const [part1, part2] = line.split(/\s+/);
-      if (part2) {
-        finalVersionsObj[part1] = part2;
-      }
-    });
-  } else if (composerPharOk) {
-    const output = cmds.execWithResult(cmds.pharShowCmd.command, basePath, cmds.pharShowCmd.args);
+  } else if (composerOk || composerPharOk) {
+    const composer = composerOk ? cmds.composerCmd : cmds.composerPharCmd;
+
+    const output = cmds.execWithResult(composer.command, basePath, [...composer.args, ...cmds.showArgs.args]);
     const versionsObj = JSON.parse(output).platform;
 
     versionsObj.forEach(({name, version}) => {

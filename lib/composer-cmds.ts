@@ -1,21 +1,16 @@
 import * as path from 'path';
 import * as childProcess from 'child_process';
 
-export const composerVersionCmd = {command: 'composer', args: ['--version']};
-export const composerShowCmd = {command: 'composer', args: ['show', '-p']};
-export const pharVersionCmd = {
-  command: `php`,
-  args: [`${path.resolve(path.resolve() + '/composer.phar')}`, '--version']
-};
-export const pharShowCmd = {
-  command: `php`,
-  args: [`${path.resolve(path.resolve() + '/composer.phar')}`, 'show', '-p', '--format=json']
-};
+export const composerCmd = {command: 'composer', args: []};
+export const composerPharCmd = {command: 'php', args: [`${path.resolve(path.resolve() + '/composer.phar')}`]};
+
+export const versionArgs = {args: ['--version']};
+export const showArgs = {args: ['show', '-p', '--format=json']};
 
 function cleanUpComposerWarnings(composerOutput: string): string {
-  // Remove all lines preceding the JSON data; including Deprecation messages and blank lines.
+  // Remove all lines preceding the JSON data; including "Deprecated" messages and blank lines.
   const lines = composerOutput.split('\n');
-  const jsonStartIndex = lines.findIndex((line) => line.length > 0 && !line.startsWith('Deprecated:'));
+  const jsonStartIndex = lines.findIndex((line) => line.startsWith('{'));
 
   return lines.slice(jsonStartIndex).join('\n');
 }
