@@ -1,7 +1,6 @@
 import {describe, expect, it} from '@jest/globals';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as request from 'sync-request';
 
 import * as plugin from '../lib';
 import {systemVersionsStub} from './stubs/system-deps-stub';
@@ -131,14 +130,16 @@ describe('project with alias in external repo', () => {
 
     // sometimes we hit the github api limit, so we use a mock
     try {
-      const res = request('GET', apiBranchesUrl, {
+      const res = await fetch(apiBranchesUrl, {
         headers: {
           'user-agent': 'CI Testing',
         },
       });
 
-      branchesData = JSON.parse(res.getBody());
-    } catch (error) {
+      branchesData = await res.json();
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error: any) {
       branchesData = [{name: 'my-bugfix'}];
     }
 

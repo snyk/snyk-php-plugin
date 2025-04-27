@@ -12,7 +12,8 @@
         "noImplicitAny": false
     },
     "include": [
-        "lib"
+        "lib",
+        "test"
     ],
     "files": [
         "node_modules/typescript/lib/lib.es6.d.ts"
