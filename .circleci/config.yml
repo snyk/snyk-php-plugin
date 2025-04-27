@@ -20,12 +20,12 @@ windows_defaults: &windows_defaults
 test_matrix_unix: &test_matrix_unix
   matrix:
     parameters:
-      node_version: [ '16.18', '18.18', '20.9' ]
+      node_version: [ '18.18', '20.9', '22.0' ]
 
 test_matrix_win: &test_matrix_win
   matrix:
     parameters:
-      node_version: [ '16', '18', '20' ]
+      node_version: [ '18', '20', '22' ]
 
 commands:
   install_deps:
