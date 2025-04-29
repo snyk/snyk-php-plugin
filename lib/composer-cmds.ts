@@ -1,11 +1,32 @@
 import * as path from 'path';
 import * as childProcess from 'child_process';
 
-export const composerCmd = {command: 'composer', args: []};
-export const composerPharCmd = {command: 'php', args: [`${path.resolve(path.resolve() + '/composer.phar')}`]};
+class Command {
+  protected constructor(readonly command: string, readonly args: string[]) {
+  }
 
-export const versionArgs = {args: ['--version']};
-export const showArgs = {args: ['show', '-p', '--format=json']};
+  protected withAdditionalArgs(args: string[]): Command {
+    return new Command(this.command, [...this.args, ...args]);
+  }
+}
+
+export class Composer extends Command {
+  public static global(): Composer {
+    return new Composer('composer', []);
+  }
+
+  public static local(): Composer {
+    return new Composer('php', [`${path.resolve(path.resolve() + '/composer.phar')}`]);
+  }
+
+  version(): Command {
+    return this.withAdditionalArgs(['--version']);
+  }
+
+  listPlatformDeps(): Command {
+    return this.withAdditionalArgs(['show', '-p', '--format=json']);
+  }
+}
 
 function cleanUpComposerWarnings(composerOutput: string): string {
   // Remove all lines preceding the JSON data; including "Deprecated" messages and blank lines.
@@ -15,15 +36,15 @@ function cleanUpComposerWarnings(composerOutput: string): string {
   return lines.slice(jsonStartIndex).join('\n');
 }
 
-export function cmdReturnsOk(cmd: string, args: string[] = []): boolean {
+export function cmdReturnsOk(cmd: Command): boolean {
   const spawnOptions: childProcess.SpawnOptions = {shell: false};
-  return !!cmd && childProcess.spawnSync(cmd, args, spawnOptions).status === 0;
+  return !!cmd && childProcess.spawnSync(cmd.command, cmd.args, spawnOptions).status === 0;
 }
 
 // run a cmd in a specific folder and it's result should be there
-export function execWithResult(cmd: string, basePath: string, args: string[] = []): string {
+export function execWithResult(cmd: Command, basePath: string): string {
   const spawnOptions: childProcess.SpawnOptions = {cwd: basePath, shell: false}
-  const execResult = childProcess.spawnSync(cmd, args, spawnOptions);
+  const execResult = childProcess.spawnSync(cmd.command, cmd.args, spawnOptions);
 
   // Throw the whole Result object in case of error, similarly to `execSync`.
   if (execResult.status !== 0) {

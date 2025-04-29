@@ -3,15 +3,9 @@ import {SystemPackages} from '@snyk/composer-lockfile-parser';
 import * as cmds from './composer-cmds';
 import {PhpOptions} from './types';
 
-function isSet(variable: boolean | undefined): boolean {
-  return typeof variable !== 'undefined';
-}
-
 export function systemDeps(basePath: string, options: PhpOptions): SystemPackages {
-  const composerOk = isSet(options.composerIsFine) ?
-    options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd.command, [...cmds.composerCmd.args, ...cmds.versionArgs.args]);
-  const composerPharOk = isSet(options.composerPharIsFine) ?
-    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.composerPharCmd.command, [...cmds.composerPharCmd.args, ...cmds.versionArgs.args]);
+  const composerOk = options.composerIsFine ?? cmds.cmdReturnsOk(cmds.Composer.global().version());
+  const composerPharOk = options.composerPharIsFine ?? cmds.cmdReturnsOk(cmds.Composer.local().version());
 
   let finalVersionsObj = {};
 
@@ -19,9 +13,9 @@ export function systemDeps(basePath: string, options: PhpOptions): SystemPackage
     // give first preference to a stub
     finalVersionsObj = options.systemVersions;
   } else if (composerOk || composerPharOk) {
-    const composer = composerOk ? cmds.composerCmd : cmds.composerPharCmd;
+    const composer = composerOk ? cmds.Composer.global() : cmds.Composer.local();
 
-    const output = cmds.execWithResult(composer.command, basePath, [...composer.args, ...cmds.showArgs.args]);
+    const output = cmds.execWithResult(composer.listPlatformDeps(), basePath);
     const versionsObj = JSON.parse(output).platform;
 
     versionsObj.forEach(({name, version}) => {
