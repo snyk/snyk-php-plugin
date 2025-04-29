@@ -9,9 +9,10 @@ function isSet(variable): boolean {
 }
 
 export function systemDeps(basePath: string, options: PhpOptions): SystemPackages {
-  const composerOk = isSet(options.composerIsFine) ? options.composerIsFine : cmds.cmdReturnsOk(cmds.composerCmd.command,cmds.composerCmd.args);
+  const composerOk = isSet(options.composerIsFine) ?
+    options.composerIsFine : cmds.cmdReturnsOk(cmds.composerVersionCmd.command, cmds.composerVersionCmd.args);
   const composerPharOk = isSet(options.composerPharIsFine) ?
-    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharCmd.command, cmds.pharCmd.args);
+    options.composerPharIsFine : cmds.cmdReturnsOk(cmds.pharVersionCmd.command, cmds.pharVersionCmd.args);
 
   let finalVersionsObj = {};
 
@@ -27,8 +28,9 @@ export function systemDeps(basePath: string, options: PhpOptions): SystemPackage
       }
     });
   } else if (composerPharOk) {
-    const output = cmds.execWithResult(cmds.pharCmd.command, basePath, cmds.pharCmd.args);
+    const output = cmds.execWithResult(cmds.pharShowCmd.command, basePath, cmds.pharShowCmd.args);
     const versionsObj = JSON.parse(output).platform;
+
     versionsObj.forEach(({name, version}) => {
       finalVersionsObj[name] = version;
     });
