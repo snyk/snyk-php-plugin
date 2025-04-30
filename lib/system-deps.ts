@@ -1,7 +1,7 @@
-import {SystemPackages} from '@snyk/composer-lockfile-parser';
+import { SystemPackages } from '@snyk/composer-lockfile-parser';
 
 import * as cmds from './composer-cmds';
-import {PhpOptions} from './types';
+import { PhpOptions } from './types';
 
 export function systemDeps(basePath: string, options: PhpOptions): SystemPackages {
   const composerOk = options.composerIsFine ?? cmds.cmdReturnsOk(cmds.Composer.global().version());

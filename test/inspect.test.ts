@@ -1,10 +1,10 @@
-import {describe, expect, it} from '@jest/globals';
+import { describe, expect, it } from '@jest/globals';
 import * as fs from 'fs';
 import * as path from 'path';
 
 import * as plugin from '../lib';
-import {systemVersionsStub} from './stubs/system-deps-stub';
-import {PhpOptions} from '../lib/types';
+import { systemVersionsStub } from './stubs/system-deps-stub';
+import { PhpOptions } from '../lib/types';
 
 const systemVersionsOptions: PhpOptions = {systemVersions: systemVersionsStub};
 
@@ -92,7 +92,7 @@ describe('project with interconnected deps', () => {
       packageFormatVersion: 'composer:0.0.1',
     });
 
-    // Tree size inferior to 200KB.
+    // Tree size less than 200KB.
     expect(JSON.stringify(pkg).length).toBeLessThan(200000);
   });
 });
@@ -137,9 +137,7 @@ describe('project with alias in external repo', () => {
       });
 
       branchesData = await res.json();
-
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error: any) {
+    } catch {
       branchesData = [{name: 'my-bugfix'}];
     }
 
