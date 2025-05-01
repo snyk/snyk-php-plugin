@@ -1,36 +1,37 @@
 import * as path from 'path';
 import * as childProcess from 'child_process';
 
-class Command {
-  protected constructor(
-    readonly command: string,
-    readonly args: string[],
-  ) {}
+type Command = {
+  command: string;
+  args: string[];
+};
 
-  protected withAdditionalArgs(args: string[]): Command {
-    return new Command(this.command, [...this.args, ...args]);
-  }
+function versionCmd(this: Command): Command {
+  return {
+    command: this.command,
+    args: [...this.args, '--version'],
+  };
 }
 
-export class Composer extends Command {
-  public static global(): Composer {
-    return new Composer('composer', []);
-  }
-
-  public static local(): Composer {
-    return new Composer('php', [
-      `${path.resolve(path.resolve() + '/composer.phar')}`,
-    ]);
-  }
-
-  version(): Command {
-    return this.withAdditionalArgs(['--version']);
-  }
-
-  listPlatformDeps(): Command {
-    return this.withAdditionalArgs(['show', '-p', '--format=json']);
-  }
+function listPlatformDepsCmd(this: Command): Command {
+  return {
+    command: this.command,
+    args: [...this.args, 'show', '-p', '--format=json'],
+  };
 }
+
+export const globalComposer = {
+  command: 'composer',
+  args: [],
+  version: versionCmd,
+  listPlatformDeps: listPlatformDepsCmd,
+};
+export const localComposer = {
+  command: 'php',
+  args: [`${path.resolve(path.resolve() + '/composer.phar')}`],
+  version: versionCmd,
+  listPlatformDeps: listPlatformDepsCmd,
+};
 
 function cleanUpComposerWarnings(composerOutput: string): string {
   // Remove all lines preceding the JSON data; including "Deprecated" messages and blank lines.

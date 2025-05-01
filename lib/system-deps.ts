@@ -8,11 +8,10 @@ export function systemDeps(
   options: PhpOptions,
 ): SystemPackages {
   const composerOk =
-    options.composerIsFine ??
-    cmds.cmdReturnsOk(cmds.Composer.global().version());
+    options.composerIsFine ?? cmds.cmdReturnsOk(cmds.globalComposer.version());
   const composerPharOk =
     options.composerPharIsFine ??
-    cmds.cmdReturnsOk(cmds.Composer.local().version());
+    cmds.cmdReturnsOk(cmds.localComposer.version());
 
   let finalVersionsObj = {};
 
@@ -23,9 +22,7 @@ export function systemDeps(
     // give first preference to a stub
     finalVersionsObj = options.systemVersions;
   } else if (composerOk || composerPharOk) {
-    const composer = composerOk
-      ? cmds.Composer.global()
-      : cmds.Composer.local();
+    const composer = composerOk ? cmds.globalComposer : cmds.localComposer;
 
     const output = cmds.execWithResult(composer.listPlatformDeps(), basePath);
     const versionsObj = JSON.parse(output).platform;
