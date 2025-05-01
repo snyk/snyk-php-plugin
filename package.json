@@ -5,7 +5,10 @@
   "scripts": {
     "build": "tsc",
     "build-watch": "tsc -w",
-    "lint": "eslint {lib,test}/**/*.ts",
+    "lint": "npm run lint:js && npm run lint:format",
+    "lint:js": "eslint {lib,test}/**/*.ts",
+    "lint:format": "prettier --check '{lib,test}/**/*.ts'",
+    "format": "prettier --write '{lib,test}/**/*.ts'",
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "test": "npm run lint && npm run unit-test",
@@ -36,6 +39,8 @@
     "@types/node": "^22.15.2",
     "@typescript-eslint/parser": "^8.31.0",
     "eslint": "9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "prettier": "^3.5.3",
     "ts-jest": "^29.3.2",
     "typescript": "5.8.3",
     "typescript-eslint": "^8.31.0"

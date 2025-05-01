@@ -6,7 +6,9 @@ import * as plugin from '../lib';
 import { systemVersionsStub } from './stubs/system-deps-stub';
 import { PhpOptions } from '../lib/types';
 
-const systemVersionsOptions: PhpOptions = {systemVersions: systemVersionsStub};
+const systemVersionsOptions: PhpOptions = {
+  systemVersions: systemVersionsStub,
+};
 
 const deepTestFolders = [
   'proj_with_no_deps',
@@ -20,21 +22,36 @@ const deepTestFolders = [
 ];
 
 describe('php plugin', () => {
-  it.each(deepTestFolders)('matches expected packages for %s', async (folder) => {
-    const projFolder = './test/fixtures/' + folder;
-    const result = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
+  it.each(deepTestFolders)(
+    'matches expected packages for %s',
+    async (folder) => {
+      const projFolder = './test/fixtures/' + folder;
+      const result = await plugin.inspect(
+        projFolder,
+        'composer.lock',
+        systemVersionsOptions,
+      );
 
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'));
-    expect(result).toEqual(expectedTree);
-  });
+      const expectedTree = JSON.parse(
+        fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'),
+      );
+      expect(result).toEqual(expectedTree);
+    },
+  );
 });
 
 describe('dev dependencies', () => {
   it('does not parse dev dependencies by default', async () => {
     const projFolder = './test/fixtures/proj_with_dev_deps';
-    const result = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
+    const result = await plugin.inspect(
+      projFolder,
+      'composer.lock',
+      systemVersionsOptions,
+    );
 
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'));
+    const expectedTree = JSON.parse(
+      fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'),
+    );
     expect(result).toEqual(expectedTree);
   });
 
@@ -42,10 +59,15 @@ describe('dev dependencies', () => {
     const projFolder = './test/fixtures/proj_with_dev_deps';
     const result = await plugin.inspect(projFolder, 'composer.lock', {
       ...systemVersionsOptions,
-      dev: true
+      dev: true,
     });
 
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_with_dev.json'), 'utf8'));
+    const expectedTree = JSON.parse(
+      fs.readFileSync(
+        path.resolve(projFolder, 'composer_deps_with_dev.json'),
+        'utf8',
+      ),
+    );
     expect(result).toEqual(expectedTree);
   });
 });
@@ -53,10 +75,11 @@ describe('dev dependencies', () => {
 describe('project with many deps', () => {
   it('generates plugin and root package objects', async () => {
     const projFolder = './test/fixtures/many_deps_php_project';
-    const {
-      plugin: resultPlugin,
-      package: pkg
-    } = await plugin.inspect(projFolder, './composer.lock', systemVersionsOptions);
+    const { plugin: resultPlugin, package: pkg } = await plugin.inspect(
+      projFolder,
+      './composer.lock',
+      systemVersionsOptions,
+    );
 
     // Plugin.
     expect(resultPlugin).toBeTruthy();
@@ -75,10 +98,11 @@ describe('project with many deps', () => {
 describe('project with interconnected deps', () => {
   it('generates plugin and root package objects', async () => {
     const projFolder = './test/fixtures/interdependent_modules';
-    const {
-      plugin: resultPlugin,
-      package: pkg
-    } = await plugin.inspect(projFolder, './composer.lock', systemVersionsOptions);
+    const { plugin: resultPlugin, package: pkg } = await plugin.inspect(
+      projFolder,
+      './composer.lock',
+      systemVersionsOptions,
+    );
 
     // Plugin.
     expect(resultPlugin).toBeTruthy();
@@ -100,13 +124,20 @@ describe('project with interconnected deps', () => {
 describe('project with alias', () => {
   it('uses the real version and not the alias', async () => {
     const projFolder = './test/fixtures/proj_with_aliases';
-    const {package: pkg} = await plugin.inspect(projFolder, './composer.lock', systemVersionsOptions);
+    const { package: pkg } = await plugin.inspect(
+      projFolder,
+      './composer.lock',
+      systemVersionsOptions,
+    );
     const deps = pkg.dependencies;
-    const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'));
-    const {version} = deps['symfony/monolog-bridge'];
+    const composerJson = JSON.parse(
+      fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'),
+    );
+    const { version } = deps['symfony/monolog-bridge'];
     // remove the trailing .0
     const actualVersionInstalled = version.slice(0, -2);
-    const expectedVersionString = composerJson.require && composerJson.require['symfony/monolog-bridge']; // '2.6 as 2.7'
+    const expectedVersionString =
+      composerJson.require && composerJson.require['symfony/monolog-bridge']; // '2.6 as 2.7'
     // real = 2.6, alias = 2.7
     const [realVersion, aliasVersion] = expectedVersionString.split(' as ');
 
@@ -118,14 +149,26 @@ describe('project with alias', () => {
 describe('project with alias in external repo', () => {
   it('uses the real version and not the alias', async () => {
     const projFolder = './test/fixtures/proj_with_aliases_external_github';
-    const {package: pkg} = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
-    const composerJson = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'));
+    const { package: pkg } = await plugin.inspect(
+      projFolder,
+      'composer.lock',
+      systemVersionsOptions,
+    );
+    const composerJson = JSON.parse(
+      fs.readFileSync(path.resolve(projFolder, 'composer.json'), 'utf8'),
+    );
     const composerJsonAlias = composerJson.require['symfony/monolog-bridge'];
-    const aliasBranch = composerJsonAlias.split(' as ').shift().replace('dev-', '');
+    const aliasBranch = composerJsonAlias
+      .split(' as ')
+      .shift()
+      .replace('dev-', '');
 
     // to be really sure, we take a look at repo@`url` and check for branch
-    const apiBranchesUrl = composerJson.repositories[0].url.replace(
-      'https://github.com/', 'https://api.github.com/repos/') + '/branches';
+    const apiBranchesUrl =
+      composerJson.repositories[0].url.replace(
+        'https://github.com/',
+        'https://api.github.com/repos/',
+      ) + '/branches';
     let branchesData;
 
     // sometimes we hit the github api limit, so we use a mock
@@ -138,10 +181,12 @@ describe('project with alias in external repo', () => {
 
       branchesData = await res.json();
     } catch {
-      branchesData = [{name: 'my-bugfix'}];
+      branchesData = [{ name: 'my-bugfix' }];
     }
 
-    const ourAliasBranchObj = branchesData.find(({name}) => name === aliasBranch);
+    const ourAliasBranchObj = branchesData.find(
+      ({ name }) => name === aliasBranch,
+    );
     const ourAliasBranchName = ourAliasBranchObj && ourAliasBranchObj.name;
 
     // In composer.json, its version looks like this: "dev-my-bugfix as 2.7"
@@ -151,14 +196,16 @@ describe('project with alias in external repo', () => {
     // todo: should be able to detect this on any repo
 
     expect(composerJson.repositories[0].type).toEqual('vcs');
-    expect(composerJson.repositories[0].url).toEqual('https://github.com/aryehbeitz/monolog-bridge');
+    expect(composerJson.repositories[0].url).toEqual(
+      'https://github.com/aryehbeitz/monolog-bridge',
+    );
 
     // The alias is a branch.
     expect(aliasBranch).toEqual(ourAliasBranchName);
 
     // Make sure we got it right in the plugin parsing.
     const deps = pkg.dependencies;
-    const {version} = deps['symfony/monolog-bridge'];
+    const { version } = deps['symfony/monolog-bridge'];
     // do we want our found version to contain a dev- prefix or not?
     // guessing not, we should add functionality so this test passes
     expect(version).toEqual(aliasBranch);
@@ -177,8 +224,12 @@ describe('versions inaccuracy when composer is not installed', () => {
 
     const result = await plugin.inspect(projFolder, 'composer.lock', options);
 
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps_no_system_versions.json'),
-      'utf8'));
+    const expectedTree = JSON.parse(
+      fs.readFileSync(
+        path.resolve(projFolder, 'composer_deps_no_system_versions.json'),
+        'utf8',
+      ),
+    );
     expect(result).toEqual(expectedTree);
   });
 });
@@ -187,7 +238,11 @@ describe('project name is not empty', () => {
   it('uses directory name when composer project name is missing', async () => {
     const projFolder = './test/fixtures/no_project_name';
 
-    const {package: pkg} = await plugin.inspect(projFolder, 'composer.lock', systemVersionsOptions);
+    const { package: pkg } = await plugin.inspect(
+      projFolder,
+      'composer.lock',
+      systemVersionsOptions,
+    );
 
     expect(pkg.name).toEqual('no_project_name');
   });
@@ -205,7 +260,9 @@ describe('project with deprecations when running composer', () => {
 
     const result = await plugin.inspect(projFolder, 'composer.lock', options);
 
-    const expectedTree = JSON.parse(fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'));
+    const expectedTree = JSON.parse(
+      fs.readFileSync(path.resolve(projFolder, 'composer_deps.json'), 'utf8'),
+    );
     expect(result).toEqual(expectedTree);
   });
 });
