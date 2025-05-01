@@ -48,7 +48,7 @@ export const systemVersionsStub = {
   'lib-openssl': '1.1.0.7',
   'lib-pcre': '8.41',
   'lib-xsl': '1.1.29',
-  'php': '7.1.12',
+  php: '7.1.12',
   'php-64bit': '7.1.12',
   'php-ipv6': '7.1.12',
 };

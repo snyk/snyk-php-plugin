@@ -11,7 +11,7 @@ function main() {
     const result = plugin.inspect(targetPath, targetFile, {});
     // tslint:disable-next-line:no-console
     console.log(JSON.stringify(result, null, 2));
-  } catch (e) {
+  } catch (error: any) {
     // tslint:disable-next-line:no-console
     console.log('Error:', error.stack);
   }
