@@ -18,10 +18,16 @@
     "dist",
     "LICENSE"
   ],
-  "homepage": "https://github.com/snyk/snyk-php-plugin",
+  "homepage": "https://github.com/snyk/snyk-php-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/snyk/snyk-php-plugin/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snyk/snyk-php-plugin"
+    "url": "https://github.com/snyk/snyk-php-plugin.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "Snyk <https://snyk.io>",
   "license": "Apache-2.0",
