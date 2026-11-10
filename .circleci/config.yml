@@ -165,7 +165,7 @@ workflows:
 
     - security-scans:
         name: Security Scans
-        node_version: "lts"
+        node_version: "22"
         context:
           - engines_sca-scanners
           - nodejs-install
@@ -174,7 +174,7 @@ workflows:
     - lint:
         name: Lint
         context: nodejs-install
-        node_version: "lts"
+        node_version: "22"
         filters:
           branches:
             ignore:
@@ -210,7 +210,7 @@ workflows:
         context:
           - nodejs-install
           - github-release
-        node_version: "lts"
+        node_version: "22"
         filters:
           branches:
             only:
