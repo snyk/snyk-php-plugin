@@ -22,12 +22,12 @@ windows_defaults: &windows_defaults
 test_matrix_unix: &test_matrix_unix
   matrix:
     parameters:
-      node_version: [ '18.18', '20.9', '22.0' ]
+      node_version: [ '22', '24', '26' ]
 
 test_matrix_win: &test_matrix_win
   matrix:
     parameters:
-      node_version: [ '18', '20', '22' ]
+      node_version: [ '22', '24', '26' ]
 
 commands:
   install_deps:
@@ -165,7 +165,7 @@ workflows:
 
     - security-scans:
         name: Security Scans
-        node_version: "20.18"
+        node_version: "lts"
         context:
           - engines_sca-scanners
           - nodejs-install
@@ -174,7 +174,7 @@ workflows:
     - lint:
         name: Lint
         context: nodejs-install
-        node_version: "20.18"
+        node_version: "lts"
         filters:
           branches:
             ignore:
@@ -210,7 +210,7 @@ workflows:
         context:
           - nodejs-install
           - github-release
-        node_version: "22.18"
+        node_version: "lts"
         filters:
           branches:
             only:
