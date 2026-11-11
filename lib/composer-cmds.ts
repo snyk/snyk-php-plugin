@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as childProcess from 'child_process';
+import { cleanSnykEnv } from '@snyk/cli-interface';
 
 type Command = {
   command: string;
@@ -42,7 +43,10 @@ function cleanUpComposerWarnings(composerOutput: string): string {
 }
 
 export function cmdReturnsOk(cmd: Command): boolean {
-  const spawnOptions: childProcess.SpawnOptions = { shell: false };
+  const spawnOptions: childProcess.SpawnOptions = {
+    shell: false,
+    env: cleanSnykEnv(process.env, process.env),
+  };
   return (
     !!cmd &&
     childProcess.spawnSync(cmd.command, cmd.args, spawnOptions).status === 0
@@ -54,6 +58,7 @@ export function execWithResult(cmd: Command, basePath: string): string {
   const spawnOptions: childProcess.SpawnOptions = {
     cwd: basePath,
     shell: false,
+    env: cleanSnykEnv(process.env, process.env),
   };
   const execResult = childProcess.spawnSync(
     cmd.command,
